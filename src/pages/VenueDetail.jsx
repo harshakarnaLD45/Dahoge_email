@@ -828,7 +828,7 @@ export function VenueDetail({
               margin: "16px 0 0",
             }}
           >
-            <img
+            {/* <img
               className="gross"
               src={fotos[fotoIdx].gross}
               alt={`${loc.name}, ${t("venue.gallery.image", {
@@ -836,7 +836,7 @@ export function VenueDetail({
               })} ${fotoIdx + 1} ${t("venue.gallery.of", {
                 defaultValue: "von",
               })} ${fotos.length}`}
-            />
+            /> */}
 
             {fotos.length > 1 && (
               <div className="mini-reihe">
