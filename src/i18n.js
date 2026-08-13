@@ -14,6 +14,7 @@ i18n
     },
     lng: savedLanguage, // Use saved language or default to 'en'
     fallbackLng: 'en', // Fallback language if the chosen language translation is missing
+    returnObjects: true, // Return arrays/objects for list keys (e.g. hostData.items)
     interpolation: {
       escapeValue: false, // React already escapes by default
     },

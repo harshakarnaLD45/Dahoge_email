@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { isEmail } from "../../utils/validate";
-import { slugify } from "../../utils/strings";
+import { slugify } from "../../Utils/strings";
 import {
   createHostAccount,
   saveHostRegistration,

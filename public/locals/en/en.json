@@ -656,23 +656,23 @@
       "hostData": {
         "title": "Host Data We Process",
         "intro": "Host registration and use of the protected host area may involve processing of:",
-        "items": {
-          "venueName": "venue name",
-          "ownerContact": "owner/contact person",
-          "address": "address, postcode, town and region",
-          "venueType": "venue type",
-          "phoneEmail": "phone number and email address",
-          "authentication": "authentication/login information",
-          "registration": "registration code and account status",
-          "capacity": "Mischtisch capacity and table/seat configuration",
-          "bookableTimes": "bookable days and times",
-          "specialDates": "special dates, closure dates and special openings",
-          "images": "uploaded venue images",
-          "promotions": "promotions, discounts and special offers",
-          "notificationEmail": "email address used for reservation notifications",
-          "profileChanges": "profile/change information",
-          "securityLogs": "technical security and log information"
-        }
+        "items": [
+          "venue name",
+          "owner/contact person",
+          "address, postcode, town and region",
+          "venue type",
+          "phone number and email address",
+          "authentication/login information",
+          "registration code and account status",
+          "Mischtisch capacity and table/seat configuration",
+          "bookable days and times",
+          "special dates, closure dates and special openings",
+          "uploaded venue images",
+          "promotions, discounts and special offers",
+          "email address used for reservation notifications",
+          "profile/change information",
+          "technical security and log information"
+        ]
       },
 
       "purposes": {

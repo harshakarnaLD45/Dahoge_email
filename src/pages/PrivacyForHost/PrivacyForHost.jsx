@@ -168,23 +168,28 @@ const { t } = useTranslation();
 
           <ul className="host-privacy-list">
             <li>
-              {t("hostPrivacy.sections.retention.items.account")}
+              {t("hostPrivacy.sections.retention.items.account.label")}{" "}
+              {t("hostPrivacy.sections.retention.items.account.text")}
             </li>
 
             <li>
-              {t("hostPrivacy.sections.retention.items.deactivation")}
+              {t("hostPrivacy.sections.retention.items.deactivation.label")}{" "}
+              {t("hostPrivacy.sections.retention.items.deactivation.text")}
             </li>
 
             <li>
-              {t("hostPrivacy.sections.retention.items.images")}
+              {t("hostPrivacy.sections.retention.items.images.label")}{" "}
+              {t("hostPrivacy.sections.retention.items.images.text")}
             </li>
 
             <li>
-              {t("hostPrivacy.sections.retention.items.logs")}
+              {t("hostPrivacy.sections.retention.items.logs.label")}{" "}
+              {t("hostPrivacy.sections.retention.items.logs.text")}
             </li>
 
             <li>
-              {t("hostPrivacy.sections.retention.items.claims")}
+              {t("hostPrivacy.sections.retention.items.claims.label")}{" "}
+              {t("hostPrivacy.sections.retention.items.claims.text")}
             </li>
           </ul>
         </section>

@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Accessibility.css";
 import { useTranslation } from "react-i18next";
 
 const Accessibility = () => {
  const {t} =useTranslation();
-
-  useEffect(() => {
-    return subscribeToLanguage((nextLanguage) => {
-      setLang(nextLanguage);
-    });
-  }, []);
 
   return (
     <main className="accessibility-page">

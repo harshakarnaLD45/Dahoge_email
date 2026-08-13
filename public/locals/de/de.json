@@ -617,23 +617,23 @@
     "hostData": {
       "title": "Von uns verarbeitete Gastgeberdaten",
       "intro": "Bei der Registrierung als Gastgeber und der Nutzung des geschützten Gastgeberbereichs können folgende Daten verarbeitet werden:",
-      "items": {
-        "venueName": "Name des Betriebs",
-        "ownerContact": "Inhaber/Ansprechpartner",
-        "address": "Adresse, Postleitzahl, Ort und Region",
-        "venueType": "Betriebsart",
-        "phoneEmail": "Telefonnummer und E-Mail-Adresse",
-        "authentication": "Authentifizierungs-/Anmeldeinformationen",
-        "registration": "Registrierungscode und Kontostatus",
-        "capacity": "Kapazität des Mischtischs und Tisch-/Sitzplatzkonfiguration",
-        "bookableTimes": "Buchbare Tage und Zeiten",
-        "specialDates": "Sondertermine, Schließtage und Sonderöffnungen",
-        "images": "Hochgeladene Bilder des Betriebs",
-        "promotions": "Aktionen, Rabatte und Sonderangebote",
-        "notificationEmail": "Für Reservierungsbenachrichtigungen verwendete E-Mail-Adresse",
-        "profileChanges": "Profil-/Änderungsinformationen",
-        "securityLogs": "Technische Sicherheits- und Protokollinformationen"
-      }
+      "items": [
+        "Name des Betriebs",
+        "Inhaber/Ansprechpartner",
+        "Adresse, Postleitzahl, Ort und Region",
+        "Betriebsart",
+        "Telefonnummer und E-Mail-Adresse",
+        "Authentifizierungs-/Anmeldeinformationen",
+        "Registrierungscode und Kontostatus",
+        "Kapazität des Mischtischs und Tisch-/Sitzplatzkonfiguration",
+        "Buchbare Tage und Zeiten",
+        "Sondertermine, Schließtage und Sonderöffnungen",
+        "Hochgeladene Bilder des Betriebs",
+        "Aktionen, Rabatte und Sonderangebote",
+        "Für Reservierungsbenachrichtigungen verwendete E-Mail-Adresse",
+        "Profil-/Änderungsinformationen",
+        "Technische Sicherheits- und Protokollinformationen"
+      ]
     },
 
     "purposes": {
