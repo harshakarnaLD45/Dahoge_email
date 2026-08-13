@@ -12,15 +12,15 @@ const { t } = useTranslation();
 
         <header className="host-privacy-header">
           <p className="host-privacy-label">
-            {t("hostPrivacy.label")}
+            {t("hostPrivacy.header.label")}
           </p>
 
           <h1>
-            {t("hostPrivacy.title")}
+            {t("hostPrivacy.header.title")}
           </h1>
 
           <p className="host-privacy-updated">
-            {t("hostPrivacy.lastUpdated")}
+            {t("hostPrivacy.header.updated")}
           </p>
         </header>
 
@@ -44,7 +44,7 @@ const { t } = useTranslation();
 
             <p>
               <strong>
-                {t("hostPrivacy.sections.controller.email")}:
+                {t("hostPrivacy.contact.email")}:
               </strong>{" "}
               <a href="mailto:info@dehoga-sachsen.de">
                 info@dehoga-sachsen.de
@@ -52,7 +52,7 @@ const { t } = useTranslation();
               <br />
 
               <strong>
-                {t("hostPrivacy.sections.controller.phone")}:
+                {t("hostPrivacy.contact.phone")}:
               </strong>{" "}
               <a href="tel:+493514289510">
                 +49 (0)351 428 95 10
@@ -93,11 +93,11 @@ const { t } = useTranslation();
 
         <section className="host-privacy-section">
           <h2>
-            <span>4.</span> {t("hostPrivacy.sections.firebase.title")}
+            <span>4.</span> {t("hostPrivacy.sections.firebaseAuth.title")}
           </h2>
 
           <p>
-            {t("hostPrivacy.sections.firebase.text")}
+            {t("hostPrivacy.sections.firebaseAuth.text")}
           </p>
         </section>
 
@@ -117,16 +117,16 @@ const { t } = useTranslation();
 
         <section className="host-privacy-section">
           <h2>
-            <span>6.</span> {t("hostPrivacy.sections.email.title")}
+            <span>6.</span> {t("hostPrivacy.sections.emailNotifications.title")}
           </h2>
 
           <p>
-            {t("hostPrivacy.sections.email.text")}
+            {t("hostPrivacy.sections.emailNotifications.text")}
           </p>
 
           <div className="host-privacy-note">
             <strong>Recommendation:</strong>{" "}
-            {t("hostPrivacy.sections.email.recommendation")}
+            {t("hostPrivacy.sections.emailNotifications.recommendation")}
           </div>
         </section>
 
