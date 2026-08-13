@@ -1,0 +1,845 @@
+{
+  "navigation": {
+    "tables": "Tische",
+    "hosts": "Gastgeber",
+    "about": "Über uns"
+  },
+
+  "accessibility": {
+    "goHome": "Zur Startseite",
+    "mainNavigation": "Hauptnavigation",
+    "chooseLanguage": "Sprache auswählen",
+    "closeNavigation": "Navigation schließen",
+    "openNavigation": "Navigation öffnen"
+  },
+  "hostPage": {
+    "eyebrow": "Für Gastronomie & Gastfreundschaft",
+    "title": "Gastgeber-Bereich",
+    "lead": "Hier anmelden oder Ihren Betrieb registrieren: Mischtisch einrichten, Plätze, Tage und Zeiten verwalten und alle Reservierungen mit den Kontaktdaten Ihrer Gäste einsehen.",
+    "signIn": "Anmelden",
+    "register": "Registrieren",
+    "noAccount": "Noch kein Konto? Wechseln Sie oben zu \"Registrieren\" — die Registrierung dauert weniger als zwei Minuten.",
+    "joinTitle": "Offiziell mitmachen",
+    "joinText": "Die Teilnahme läuft über die unterschriebene Nutzungsvereinbarung des DEHOGA Bayern — per E-Mail mit dem Betreff \"MISCHTISCH in SACHSEN\" an info@gastgeber-ag.bayern. Danach folgt der Eintrag im Mischtisch-Finder und das Starterpaket vom DEHOGA Sachsen, das die Kosten für sächsische Betriebe übernimmt.",
+    "seeSteps": "Alle Schritte ansehen →",
+    "signedOut": "Abgemeldet",
+    "loading": "Gastgeber-Bereich wird geladen …",
+    "venueNotFound": "Ihr Betrieb konnte nicht geladen werden — bitte erneut anmelden oder registrieren."
+  },
+
+  "host": {
+    "areaLabel": "Gastgeber-Bereich · {{city}}",
+    "notificationsGoTo": "Benachrichtigungen gehen an:",
+    "noEmailOnFile": "— keine E-Mail hinterlegt —",
+    "signOut": "Abmelden",
+    "registrationCode": "Registrierungscode",
+    "tabs": {
+      "reservations": "Reservierungen",
+      "myMischtisch": "Mein Mischtisch",
+      "profile": "Profil"
+    },
+    "res": {
+      "title": "Reservierungen",
+      "subtitle": "Alle aktuellen Gäste-Reservierungen, übersichtlich nach Datum gruppiert.",
+      "notificationsWaitingOne": "1 Benachrichtigung wartet",
+      "notificationsWaitingMany": "{{count}} Benachrichtigungen warten",
+      "pendingText": "Diese Reservierungen konnten noch nicht automatisch per E-Mail zugestellt werden. Mit einem Klick versenden — oder unten eine Versandadresse hinterlegen, dann passiert es künftig automatisch.",
+      "sendNow": "Jetzt senden",
+      "done": "Erledigt",
+      "loading": "Reservierungen werden geladen …",
+      "empty": "Noch keine Reservierungen über die Plattform.",
+      "emptyHint": "Sobald ein Gast bucht, erscheint die Reservierung hier — zusätzlich zur E-Mail.",
+      "personsOne": "1 Person",
+      "personsMany": "{{count}} Personen",
+      "chair": "Stuhl",
+      "chairs": "Stühle",
+      "promotion": "★ Aktion: {{aktion}}",
+      "message": "Nachricht: „{{note}}“",
+      "confirmed": "Bestätigt"
+    },
+    "cfg": {
+      "title": "Mein Mischtisch",
+      "subtitle": "Verwalte deinen Tisch, die buchbaren Zeiten, Sondertermine, Aktionen und Bestätigungs-Informationen.",
+      "table": {
+        "title": "Tisch & Plätze",
+        "subtitle": "Form, Kapazität und optionale Maße für den einzigen Mischtisch deines Betriebs.",
+        "setChangeShape": "Tischform festlegen / ändern",
+        "shapePageError": "Die Tischform-Seite konnte nicht geöffnet werden.",
+        "shape": "Tischform",
+        "standardLayout": "Standard-Layout (rechteckig)",
+        "size": "Tischgröße: Wie viele Personen passen hin?",
+        "redistribute": "Die Plätze werden gleichmäßig auf die gewählte Tischform verteilt ({{shape}}).",
+        "dimensions": "Tischmaße (optional, für unsere Unterlagen)",
+        "dimensionsPlaceholder": "z. B. 220 × 90 cm oder Ø 140 cm"
+      },
+      "photos": {
+        "title": "Fotos",
+        "subtitle": "Optionale Bilder deines Betriebs und Mischtischs für die Gästeansicht."
+      },
+      "times": {
+        "title": "Wöchentliche buchbare Zeiten",
+        "subtitle": "Lege fest, an welchen Tagen dein Mischtisch verfügbar ist und welche Zeitfenster Gäste buchen können.",
+        "selectDaysFirst": "Bitte zuerst Mischtisch-Tage auswählen."
+      },
+      "specialDates": {
+        "title": "Sondertermine",
+        "subtitle": "Schließtage und Sonderöffnungen, die deinen Wochenplan überschreiben."
+      },
+      "offers": {
+        "title": "Angebote & Aktionen",
+        "subtitle": "Ein dauerhaftes Angebot plus optionale Themenwochen, die Gäste beim Buchen sehen.",
+        "allowMultiple": "Mehrfach-Reservierungen erlauben",
+        "allowMultipleHint": "Gäste können mehrere Zeitfenster auf einmal buchen — dein Tisch kann pro Tag mehrfach belegt werden.",
+        "permanentOffer": "Dauerhaftes Spezialangebot am Mischtisch (optional)",
+        "permanentOfferPlaceholder": "z. B. Mischtisch-Menü 19,90 € inkl. Getränk",
+        "promotionWeeks": "Aktionswochen & Zusatztermine",
+        "promotionWeeksHint": "Themenwochen wie „Lausitzer Fischwochen“, Wildwochen oder Spargelzeit: Zeitraum angeben, optional eigene Zeiten und ein Spezialangebot. Gäste sehen die Aktion beim Buchen."
+      },
+      "changesApply": "Änderungen gelten sofort für neue Reservierungen.",
+      "saving": "Wird gespeichert …",
+      "saveChanges": "Änderungen speichern"
+    },
+    "profil": {
+      "title": "Profil",
+      "subtitle": "Verwalte die Betriebsdaten aus deiner Registrierung und deine Anmeldedaten.",
+      "venueDetails": "Betriebsdaten",
+      "venueName": "Betriebsname *",
+      "owner": "Inhaber / Pächter *",
+      "street": "Straße *",
+      "postcode": "PLZ *",
+      "town": "Ort *",
+      "region": "Region",
+      "venueType": "Art des Betriebs",
+      "phone": "Telefon",
+      "detailsNotice": "Diese Angaben stammen aus deiner Registrierung und werden auf der Gästeseite angezeigt.",
+      "changePassword": "Passwort ändern",
+      "currentPassword": "Aktuelles Passwort",
+      "newPassword": "Neues Passwort",
+      "confirmPassword": "Passwort bestätigen",
+      "pwErrors": {
+        "currentRequired": "Bitte gib dein aktuelles Passwort ein.",
+        "currentWrong": "Das aktuelle Passwort ist falsch.",
+        "newRequired": "Bitte gib ein neues Passwort ein.",
+        "minLength": "Mindestens 8 Zeichen.",
+        "confirmRequired": "Bitte wiederhole das neue Passwort.",
+        "mismatch": "Die Passwörter stimmen nicht überein."
+      },
+      "saveProfile": "Profil speichern"
+    },
+    "toasts": {
+      "fillProfile": "Bitte fülle Betriebsname, Straße, PLZ, Ort und Inhaber aus.",
+      "emailRequired": "Bitte hinterlege eine E-Mail-Adresse für Reservierungsbestätigungen.",
+      "dayRequired": "Bitte wähle mindestens einen Mischtisch-Tag.",
+      "slotRequired": "Bitte lege mindestens eine Uhrzeit fest.",
+      "missingDayTimes": "Bitte lege für alle gewählten Tage Uhrzeiten fest (fehlend: {{days}}).",
+      "checkPasswordFields": "Bitte prüfe die Passwortfelder.",
+      "passwordWrong": "Das aktuelle Passwort ist falsch.",
+      "passwordNotVerified": "Das Passwort konnte nicht überprüft werden.",
+      "saved": "Mischtisch-Daten gespeichert — für Gäste sofort sichtbar",
+      "saveFailed": "Speichern fehlgeschlagen.",
+      "saveFailedWithMessage": "Speichern fehlgeschlagen: {{message}}",
+      "cancelled": "Storniert — der Gast würde per E-Mail informiert",
+      "cancelFailed": "Stornieren fehlgeschlagen.",
+      "emailSent": "E-Mail gesendet"
+    },
+    "modal": {
+      "title": "Ungespeicherte Änderungen verwerfen?",
+      "text": "Du hast Änderungen, die noch nicht gespeichert wurden. Wenn du fortfährst, gehen sie verloren.",
+      "keepEditing": "Weiter bearbeiten",
+      "discard": "Änderungen verwerfen"
+    }
+  },
+
+  "home": {
+    "hero": {
+      "eyebrow": "Gemeinschaftstische in ganz Sachsen",
+      "titleLine1": "Ein Tisch,",
+      "titleLine2": "der mischt.",
+      "description": "Jeder teilnehmende Gasthof, jedes Restaurant und Hotel stellt genau einen Mischtisch — den Tisch für alle, die nicht allein essen möchten. Hier buchst du deinen Platz: ein Ort für ganz Sachsen, von Görlitz bis ins Vogtland.",
+      "findSeat": "Platz suchen",
+      "forHosts": "Für Gastgeber",
+      "partnerVenues": "Partnerbetriebe",
+      "regions": "Regionen",
+      "oneAccount": "ein Konto",
+      "tableCaption": "So sieht Mischen aus: belegt, frei — und bald du."
+    },
+    "filters": {
+      "allRegions": "Alle Regionen",
+      "searchPlaceholder": "Ort oder Betrieb suchen …",
+      "searchLabel": "Suche"
+    },
+    "empty": "Kein Mischtisch gefunden. Versuche eine andere Region oder einen anderen Suchbegriff."
+  },
+  "venue": {
+    "date": "Datum",
+    "time": "Uhrzeit",
+    "hour": " Uhr",
+    "navigation": {
+      "allTables": "← Alle Tische"
+    },
+    "seats": {
+      "oneTable": "Plätze · ein Tisch"
+    },
+    "gallery": {
+      "image": "Bild",
+      "of": "von",
+      "show": "anzeigen"
+    },
+    "promotion": {
+      "today": "Aktion an diesem Tag",
+      "upcoming": "Kommende Aktionswoche",
+      "daily": " · in dieser Zeit täglich buchbar"
+    },
+    "closed": {
+      "title": "Ruhetag",
+      "message": "{{venue}} hat an diesem Tag geschlossen.",
+      "noTable": "{{venue}} deckt den Mischtisch an diesem Tag nicht.",
+      "tableDays": "Mischtisch-Tage hier:"
+    },
+    "fullyBooked": "ausgebucht",
+    "fullyBookedMessage": "Für diesen Termin sind alle Plätze vergeben. Bitte ein anderes Datum wählen.",
+    "multipleSlots": " — mehrere Zeitfenster wählbar",
+    "specialDate": "Sondertermin",
+    "specialOpening": "Sonderöffnung",
+    "specialClosed": "Geschlossen — Gäste sehen „ausgebucht“",
+    "specialNotice": "Sondertermin — an diesem Tag gibt es den Mischtisch zusätzlich.",
+    "specialImage": "Bild zum Sondertermin",
+    "multipleBookingNotice": "Deine Plätze werden für alle {{count}} gewählten Zeitfenster reserviert.",
+    "provisionalNotice": "Vorläufige Standardzeiten — Plätze, Tage und Uhrzeiten bestätigt der Betrieb im Gastgeber-Bereich.",
+    "freeSeats": "{{free}} von {{total}} Plätzen frei",
+    "selectChair": "Tippe auf freie Stühle — jeder gewählte Stuhl steht für eine Person.",
+    "contact": {
+      "title": "Deine Kontaktdaten",
+      "onePerson": "Reservierung für 1 Person",
+      "multiplePeople": "Reservierung für {{count}} Personen"
+    },
+    "form": {
+      "firstName": "Vorname *",
+      "firstNamePlaceholder": "Anna",
+      "lastName": "Nachname *",
+      "lastNamePlaceholder": "Beispiel",
+      "email": "E-Mail-Adresse *",
+      "emailPlaceholder": "anna@beispiel.example",
+      "phone": "Telefonnummer *",
+      "phonePlaceholder": "0351 1234567",
+      "street": "Straße und Hausnummer",
+      "streetPlaceholder": "Musterweg 12",
+      "postcode": "PLZ und Ort",
+      "postcodePlaceholder": "01067 Dresden",
+      "optional": "(freiwillig)",
+      "message": "Nachricht an den Gastgeber (optional)",
+      "messagePlaceholder": "z. B. vegetarisch, komme etwas später …",
+      "consent": "Ich bin einverstanden, dass meine Angaben zur Bearbeitung dieser Reservierung gespeichert und an {{venue}} übermittelt werden. *",
+      "privacy": "Datenschutzhinweise"
+    },
+    "validation": {
+      "consent": "Bitte der Verarbeitung deiner Angaben zustimmen.",
+      "required": "Bitte alle Pflichtfelder (*) vollständig ausfüllen.",
+      "selectChair": "Bitte oben im Tischplan mindestens einen Stuhl auswählen."
+    },
+    "booking": {
+      "booking": "Wird reserviert …",
+      "bookNow": "Verbindlich reservieren"
+    },
+    "people": {
+      "single": "{{count}} Person",
+      "multiple": "{{count}} Personen"
+    },
+    "confirmation": {
+      "title": "Du sitzt mit am Tisch",
+      "oneSeat": "1 Platz",
+      "multipleSeats": "{{count}} Plätze",
+      "atTable": "am Mischtisch im",
+      "hour": " Uhr",
+      "chair": "Stuhl",
+      "print": "Als PDF speichern",
+      "calendar": "In den Kalender übernehmen",
+      "moreTables": "Weitere Tische ansehen"
+    },
+    "toast": {
+      "testMode": "Platz reserviert — Mails im Testmodus erfasst (keine echte Zustellung)",
+      "emailsSent": "Platz reserviert — E-Mails versendet",
+      "venueNotified": "Platz reserviert — Betrieb benachrichtigt",
+      "booked": "Platz reserviert",
+      "error": "Das hat nicht geklappt — bitte noch einmal versuchen."
+    }
+  },
+  "tablePlan": {
+    "planWithSeats": "Tischplan mit {{count}} Plätzen",
+    "seatAction": "Platz {{seat}} {{action}}",
+    "select": "auswählen",
+    "deselect": "abwählen",
+    "seatTaken": "Platz {{seat}} belegt",
+    "legend": {
+      "free": "frei",
+      "taken": "belegt",
+      "yourSeat": "dein Platz"
+    },
+    "seatsFree": "{{free}} von {{total}} Plätzen frei"
+  },
+  "table": {
+    "seats": "Plätze",
+    "customLayout": "Eigene Anordnung",
+    "shapes": {
+      "round": "Rund",
+      "square": "Quadratisch",
+      "rectangular": "Rechteckig"
+    },
+    "environment": {
+      "kitchen": "Küche",
+      "entrance": "Eingang",
+      "window": "Fenster",
+      "counterBar": "Theke / Bar",
+      "terrace": "Terrasse",
+      "wall": "Wand",
+      "tiledStove": "Kachelofen",
+      "garden": "Garten"
+    },
+    "presets": {
+      "E6": "Eckig · 6 Plätze (3+3)",
+      "E8": "Eckig · 8 Plätze (4+4)",
+      "E8S": "Eckig · 8 mit Stirnplätzen",
+      "E10": "Eckig · 10 Plätze (5+5)",
+      "E10S": "Eckig · 10 mit Stirnplätzen",
+      "E12": "Lange Tafel · 12 Plätze",
+      "Q8": "Quadratisch · 8 Plätze",
+      "R6": "Rund · 6 Plätze",
+      "R8": "Rund · 8 Plätze",
+      "R10": "Rund · 10 Plätze"
+    }
+  },
+  "dates": {
+    "daily": "täglich",
+    "days": {
+      "short": {
+        "sunday": "So",
+        "monday": "Mo",
+        "tuesday": "Di",
+        "wednesday": "Mi",
+        "thursday": "Do",
+        "friday": "Fr",
+        "saturday": "Sa"
+      },
+      "long": {
+        "sunday": "Sonntag",
+        "monday": "Montag",
+        "tuesday": "Dienstag",
+        "wednesday": "Mittwoch",
+        "thursday": "Donnerstag",
+        "friday": "Freitag",
+        "saturday": "Samstag"
+      }
+    }
+  },
+  "auth": {
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "login": {
+      "email": "E-Mail-Adresse",
+      "password": "Passwort",
+      "emailPlaceholder": "anna@beispiel.example",
+      "signIn": "Anmelden",
+      "checking": "Wird geprüft …",
+      "required": "Bitte alle erforderlichen Angaben eingeben.",
+      "invalidEmail": "Bitte eine gültige E-Mail-Adresse eingeben.",
+      "incorrectCredentials": "E-Mail oder Passwort ist falsch.",
+      "failed": "Anmeldung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+      "welcomeBack": "Willkommen zurück!"
+    },
+    "register": {
+      "venue": "Ihr Betrieb",
+      "yourVenue": "Ihr Betrieb",
+      "venuePlaceholder": "z. B. Gasthof Goldener Löwe",
+      "street": "Straße und Hausnummer *",
+      "streetPlaceholder": "Musterstraße 12",
+      "postcode": "PLZ *",
+      "town": "Ort *",
+      "region": "Region",
+      "venueType": "Art des Betriebs",
+      "description": "Kurzbeschreibung (für Gäste sichtbar)",
+      "descriptionPlaceholder": "Kurzbeschreibung für Gäste",
+      "owner": "Inhaber / Pächter *",
+      "ownerPlaceholder": "Max Mustermann",
+      "email": "E-Mail (Zugang & Bestätigungen) *",
+      "phone": "Telefon (optional)",
+      "phonePlaceholder": "0351 1234567",
+      "register": "Registrieren & loslegen",
+      "registering": "Wird registriert …",
+      "success": "Registrierung erfolgreich!",
+      "failed": "Registrierung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+      "saved": "Registrierung gespeichert",
+      "accountFor": "Konto für",
+      "accountCreated": "wurde angelegt. Anmeldung künftig mit",
+      "testConfirmation": "Bestätigungsmail im Testmodus: ",
+      "confirmationSent": "Bestätigungsmail wurde versendet.",
+      "confirmationFailed": "Bestätigungsmail konnte nicht versendet werden.",
+      "confirmationSending": "Bestätigungsmail wird versendet …",
+      "underReview": "Ihre Anmeldung wird geprüft.",
+      "reviewMessage": "Nach Prüfung erhalten Sie Ihr Starterpaket vom DEHOGA Sachsen.",
+      "testMode": "Testmodus:",
+      "viewTestEmail": "Testmail ansehen",
+      "backHome": "Zur Startseite",
+      "usageAgreement": "Ich habe die Nutzungsvereinbarung gelesen und stimme ihr zu.",
+      "seeSteps": "Schritte ansehen",
+      "privacyAgreement": "Ich habe die Datenschutzhinweise gelesen und stimme der Verarbeitung meiner Angaben zu.",
+      "privacyNotice": "Datenschutzhinweise",
+      "requiredFields": "Bitte alle Pflichtfelder ausfüllen.",
+      "confirmAgreement": " Nutzungsvereinbarung bestätigen.",
+      "agreePrivacy": " Datenschutzhinweisen zustimmen.",
+      "prototype": "Prototyp — Angaben werden an den DEHOGA Sachsen übermittelt."
+    }
+  },
+  "about": {
+    "eyebrow": "Die Idee",
+    "title": "Ein Tisch, der verbindet",
+    "lead": "Der Mischtisch wurde vom DEHOGA Bayern als landesweite Kampagne für eine lebendige Wirtshauskultur entwickelt. Diese Plattform bringt die Idee nach Sachsen und ergänzt, was bisher fehlte: ein zentrales Online-Buchungssystem für alle teilnehmenden Betriebe.",
+
+    "cards": {
+      "oneTable": {
+        "title": "Ein Tisch pro Haus",
+        "text": "Jeder teilnehmende Betrieb — Gasthof, Restaurant oder Hotel — richtet unter der gemeinsamen Marke genau einen Gemeinschaftstisch ein und gibt an, wie viele Personen daran Platz finden."
+      },
+      "seatsNotTables": {
+        "title": "Plätze statt Tische",
+        "text": "Beim Mischtisch buchst du einen Platz, keinen ganzen Tisch. Wer kommt, gesellt sich einfach dazu — allein, zu zweit oder spontan."
+      },
+      "oneAccount": {
+        "title": "Ein Konto, ganz Sachsen",
+        "text": "Jeder Mischtisch im Freistaat läuft über eine zentrale Plattform. Gast und Betrieb erhalten für jede Buchung automatisch eine E-Mail-Bestätigung."
+      }
+    },
+
+    "campaignClaims": {
+      "prefix": "Die offiziellen Claims der Kampagne:",
+      "claimOne": "\"Tische teilen. Menschen mischen.\"",
+      "and": "und",
+      "claimTwo": "\"Gemeinsam essen ist besser.\""
+    },
+
+    "join": {
+      "eyebrow": "Mitmachen — so funktioniert es",
+      "title": "Vier Schritte in die Mischtisch-Familie"
+    },
+
+    "steps": {
+      "step1": {
+        "title": "Nutzungsvereinbarung ausfüllen und unterschreiben",
+        "textBeforeEmail": "Fülle die Nutzungsvereinbarung des DEHOGA Bayern mit den Kontaktdaten des Betriebs aus, unterschreibe sie und sende sie mit dem Betreff \"MISCHTISCH in SACHSEN\" per E-Mail an",
+        "textAfterEmail": ". Alternativ per Post an: DEHOGA Bayern e. V., Fachbereich Gastronomie, MISCHTISCH in SACHSEN, Türkenstraße 7, 80333 München."
+      },
+
+      "step2": {
+        "title": "Eintrag im \"Mischtisch\"-Finder",
+        "textBeforeLink": "Nach Eingang der Vereinbarung wird der Betrieb im \"Mischtisch\"-Finder auf",
+        "textAfterLink": " eingetragen — der Karte, auf der Gäste alle teilnehmenden Betriebe finden."
+      },
+
+      "step3": {
+        "title": "Starterpaket vom DEHOGA Sachsen",
+        "text": "Das Starterpaket kommt direkt vom DEHOGA Sachsen — die Kosten wurden für sächsische Betriebe bereits vom Landesverband übernommen."
+      },
+
+      "step4": {
+        "title": "Das Mischen kann beginnen",
+        "text": "Das Starterpaket bildet die Grundlage für die Einrichtung des eigenen Mischtischs. Anschließend kann der Tisch hier auf der Plattform mit Plätzen, Tagen und Zeiten für Reservierungen aktiviert werden."
+      }
+    },
+
+    "goodToKnow": {
+      "title": "Gut zu wissen — aus der Nutzungsvereinbarung",
+      "item1": "\"Mischtisch\" ist eine geschützte Wort- und Bildmarke; Markeninhaber ist der DEHOGA Bayern. Die Markenvorlagen aus Anlage 1 dürfen nicht verändert oder verzerrt werden.",
+      "item2": "Die Nutzungsgebühr ist durch das Starterpaket abgedeckt (90 € brutto für Verbandsmitglieder, 120 € für Nichtmitglieder) — für sächsische Betriebe übernimmt der DEHOGA Sachsen diese Kosten.",
+      "item3": "Jeder teilnehmende Betrieb bewirtet am Mischtisch jede Person — unabhängig von Nationalität, Hautfarbe oder Geschlecht. Das Hausrecht des Gastgebers bleibt unberührt.",
+      "item4": "Die Vereinbarung läuft auf unbestimmte Zeit und kann vom Betrieb mit einer Frist von vier Wochen zum Monatsende gekündigt werden."
+    },
+
+    "notice": "Prototyp / Konzeptentwurf — die in der Tabellenübersicht aufgeführten Betriebe und E-Mail-Adressen sind Beispieldaten. Grundlage der Teilnahmeinformationen: Nutzungsvereinbarung \"Mischtisch\" des DEHOGA Bayern (Stand Oktober 2024) einschließlich Anlage 1 sowie die offiziellen Bearbeitungsschritte für \"MISCHTISCH in SACHSEN\". Für den Live-Start müssen die originalen Markenvorlagen aus Anlage 1 unverändert verwendet werden."
+  },
+
+
+  "beleg": {
+    "ReservationConfirmation": "Reservierungsbestätigung",
+    "Number": "Nr.",
+    "Venue": "Betrieb",
+    "Date": "Datum",
+    "Time": "Uhrzeit",
+    "ClockSuffix": "Uhr",
+    "People": "Personen",
+    "OnePerson": "1 Person",
+    "ManyPeople": "{{count}} Personen",
+    "Chair": "Sitzplatz",
+    "Guest": "Gast",
+    "Contact": "Kontakt",
+    "Address": "Adresse",
+    "Promotion": "Aktion",
+    "Message": "Nachricht",
+    "VenueReachable": "Betrieb erreichbar",
+    "Footnote": "Bitte erscheinen Sie pünktlich zu Ihrer Reservierung."
+  },
+  "aktionen": {
+    "validation": {
+      "invalidDateRange": "Das „Bis“-Datum darf nicht vor dem „Von“-Datum liegen."
+    },
+    "time": {
+      "hour": " Uhr"
+    },
+    "dailyBookable": "täglich buchbar",
+    "remove": "Entfernen",
+    "form": {
+      "title": "Titel der Aktion",
+      "titlePlaceholder": "z. B. Lausitzer Fischwochen",
+      "from": "Von",
+      "to": "Bis",
+      "specialOffer": "Spezialangebot (für Gäste sichtbar)",
+      "specialOfferPlaceholder": "z. B. Fischplatte am Mischtisch, 24 € p. P.",
+      "bookableFrom": "Reservierbar von",
+      "interval": "Takt"
+    },
+    "dailyPeriod": "In diesem Zeitraum",
+    "daily": "täglich",
+    "dailyDescription": "buchbar — auch an Tagen ohne regulären Mischtisch (Ruhetage bleiben geschlossen).",
+    "customTimes": "Eigene Uhrzeiten für die Aktion (sonst gelten die regulären Zeiten).",
+    "intervals": {
+      "every30": "alle 30 Minuten",
+      "every60": "jede Stunde",
+      "every90": "alle 90 Minuten",
+      "every120": "alle 2 Stunden"
+    },
+    "notice": "Aktionen erscheinen bei Gästen mit Titel, Zeitraum und Angebot — und werden in Bestätigung und E-Mail mitgeführt.",
+    "add": "Aktion hinzufügen"
+  },
+   "chairEditor": {
+    "arrangeSeats": "Plätze anordnen",
+    "addSeat": "Platz {{number}} setzen",
+    "removeSeat": "Platz {{number}} entfernen"
+  },
+  "emailCard": {
+    "demoDispatch": "Demo dispatch",
+    "from": "From",
+    "to": "To",
+    "subject": "Subject"
+  },
+
+  "photoUploader": {
+    "errors": {
+      "imagesOnly": "Bitte nur Bilddateien wählen.",
+      "tooLarge": "Die Datei „{{fileName}}“ ist zu groß (max. 1 MB).",
+      "processing": "Das Bild „{{fileName}}“ konnte nicht verarbeitet werden."
+    },
+    "success": {
+      "replaced": "Foto ersetzt.",
+      "added": "Foto hinzugefügt."
+    },
+    "alt": {
+      "venuePhoto": "Foto des Betriebs"
+    },
+    "remove": "Foto entfernen",
+    "coverImage": "Titelbild",
+    "makeCover": "Als Titelbild",
+    "notice": {
+      "limit": "Maximal 1 Foto, Original maximal 1 MB.",
+      "compression": "Bilder werden automatisch verkleinert."
+    },
+    "buttons": {
+      "processing": "Wird verarbeitet …",
+      "replace": "Foto ersetzen",
+      "choose": "Foto auswählen"
+    }
+  },
+
+  "footer": {
+    "legal": "Rechtliches",
+    "imprint": "Impressum",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen & Reservierung",
+    "accessibility": "Barrierefreiheit",
+
+    "forHosts": "Für Gastgeber",
+    "hostTerms": "Bedingungen für Gastgeber",
+    "hostPrivacy": "Datenschutzhinweise für Gastgeber",
+
+    "tagline": "Mischtisch Sachsen · 2026",
+
+    "homeAria": "Zur Startseite",
+    "legalNavAria": "Rechtliche Links",
+    "hostNavAria": "Links für Gastgeber",
+    "logoAlt": "Mischtisch Sachsen – DEHOGA Sachsen"
+  },
+  "accessibilityPage": {
+  "eyebrow": "Barrierefreiheit & Inklusion",
+  "title": "Barrierefreiheit",
+  "lastUpdated": "Zuletzt aktualisiert: August 2026",
+
+  "ourGoal": {
+    "title": "Unser Ziel",
+    "text": "Mischtisch Sachsen soll für möglichst viele Nutzer wahrnehmbar, bedienbar, verständlich und robust sein. Da Verbraucher Reservierungen elektronisch starten und abschließen können, verfolgen wir einen vorsichtigen Ansatz und behandeln die Plattform als E-Commerce-Dienst, für den die geltenden Anforderungen des BFSG/BFSGV berücksichtigt werden sollten."
+  },
+
+  "serviceDescription": {
+    "title": "Beschreibung des Dienstes",
+    "text": "Der Dienst ermöglicht es Nutzern, teilnehmende Gastgeber zu finden, nach Region und Datum zu suchen, Informationen und Angebote der Gastgeber anzusehen, Reservierungszeiten auszuwählen, mehrere Plätze zu reservieren und eine Bestätigung zu erhalten. Gastgeber können sich in einem geschützten Bereich anmelden, um ihre Mischtisch-Informationen zu verwalten."
+  },
+
+  "measures": {
+    "title": "Maßnahmen zur Barrierefreiheit",
+    "text": "Die Neugestaltung soll Tastaturbedienung, sichtbare Fokuszustände, semantische Strukturen, eindeutige Formularbeschriftungen, verständliche Fehlermeldungen, ausreichenden Kontrast, Alternativtexte, Informationen ohne alleinige Farbcodierung, responsive und skalierbare Layouts, eine logische Reihenfolge für Screenreader, klare DE/EN-Inhalte sowie barrierearme Anmelde- und Reservierungsabläufe berücksichtigen."
+  },
+
+  "currentStatus": {
+    "title": "Aktueller Stand",
+    "text": "Die Plattform wird derzeit neu gestaltet. Die Barrierefreiheit soll im Rahmen des Relaunches getestet und dokumentiert werden. Bis eine vollständige Bewertung abgeschlossen ist, sollte die Website keine uneingeschränkte Konformität mit einer bestimmten WCAG-Stufe behaupten."
+  },
+
+  "reportBarrier": {
+    "title": "Barriere melden",
+    "emailLabel": "E-Mail",
+    "phoneLabel": "Telefon",
+    "text": "Bitte nennen Sie die betroffene Seite oder Funktion, die bestehende Barriere und, sofern hilfreich, das verwendete Gerät oder die eingesetzte assistive Technologie."
+  }
+},
+"hostPrivacy": {
+  "header": {
+    "label": "Für Gastgeber",
+    "title": "Datenschutzhinweise für Gastgeber",
+    "updated": "Zuletzt aktualisiert: August 2026"
+  },
+
+  "contact": {
+    "email": "E-Mail",
+    "phone": "Telefon"
+  },
+
+  "sections": {
+    "controller": {
+      "title": "Verantwortlicher"
+    },
+
+    "hostData": {
+      "title": "Von uns verarbeitete Gastgeberdaten",
+      "intro": "Bei der Registrierung als Gastgeber und der Nutzung des geschützten Gastgeberbereichs können folgende Daten verarbeitet werden:",
+      "items": {
+        "venueName": "Name des Betriebs",
+        "ownerContact": "Inhaber/Ansprechpartner",
+        "address": "Adresse, Postleitzahl, Ort und Region",
+        "venueType": "Betriebsart",
+        "phoneEmail": "Telefonnummer und E-Mail-Adresse",
+        "authentication": "Authentifizierungs-/Anmeldeinformationen",
+        "registration": "Registrierungscode und Kontostatus",
+        "capacity": "Kapazität des Mischtischs und Tisch-/Sitzplatzkonfiguration",
+        "bookableTimes": "Buchbare Tage und Zeiten",
+        "specialDates": "Sondertermine, Schließtage und Sonderöffnungen",
+        "images": "Hochgeladene Bilder des Betriebs",
+        "promotions": "Aktionen, Rabatte und Sonderangebote",
+        "notificationEmail": "Für Reservierungsbenachrichtigungen verwendete E-Mail-Adresse",
+        "profileChanges": "Profil-/Änderungsinformationen",
+        "securityLogs": "Technische Sicherheits- und Protokollinformationen"
+      }
+    },
+
+    "purposes": {
+      "title": "Zwecke und Rechtsgrundlagen",
+      "text1": "Die Daten werden verarbeitet, um das Gastgeberkonto zu erstellen und zu verwalten, die Teilnahmeberechtigung zu prüfen, das öffentliche Gastgeberprofil anzuzeigen, Mischtisch-Zeitpläne und Kapazitäten zu verwalten, Reservierungen zu übermitteln, den Gastgeber über Reservierungen zu informieren, die Plattform abzusichern sowie Missbrauch zu verhindern oder zu untersuchen.",
+      "text2": "Soweit die Verarbeitung für die Partnerbeziehung erforderlich ist, erfolgt sie grundsätzlich auf Grundlage von Artikel 6 Absatz 1 Buchstabe b DSGVO. Erforderliche Sicherheits-, Missbrauchspräventions- und betriebliche Verarbeitungen können auf Grundlage von Artikel 6 Absatz 1 Buchstabe f DSGVO erfolgen."
+    },
+
+    "firebaseAuth": {
+      "title": "Firebase-Authentifizierung",
+      "text": "Gastgeberkonten werden über Google Firebase Authentication authentifiziert. Google gibt an, dass Firebase Authentication über Rechenzentren in den USA betrieben wird. Google stellt für relevante Firebase-Dienste vertragliche Regelungen zur Datenverarbeitung und zu Datenübermittlungen bereit."
+    },
+
+    "firestore": {
+      "title": "Cloud Firestore und Cloud Storage für Firebase",
+      "text1": "Profil-, Zeitplan-, Kapazitäts-, reservierungsbezogene und andere Plattformdaten können in Cloud Firestore gespeichert werden. Bilder der Gastgeber werden in Cloud Storage für Firebase gespeichert.",
+      "text2": "Soweit technisch verfügbar, sollte für Firestore und Cloud Storage ein Datenstandort innerhalb der EU/des EWR konfiguriert und dokumentiert werden."
+    },
+
+    "emailNotifications": {
+      "title": "E-Mail-Benachrichtigungen",
+      "text": "Reservierungsbenachrichtigungen werden technisch über EmailJS ausgelöst und über ein verbundenes Gmail-Konto von Google versendet. Dabei können die Empfängeradresse, Reservierungsinformationen und weitere für die Benachrichtigung erforderliche Nachrichteninhalte verarbeitet werden.",
+      "recommendationLabel": "Empfehlung:",
+      "recommendation": "Für den produktiven Einsatz wird ein geschäftlich verwaltetes E-Mail-Konto empfohlen, vorzugsweise Google Workspace oder ein anderer vertraglich geeigneter geschäftlicher E-Mail-Dienst."
+    },
+
+    "publicProfile": {
+      "title": "Öffentliches Gastgeberprofil",
+      "text1": "Für Gäste sichtbare Informationen können den Namen des Betriebs, Standort/Region, Betriebsart, öffentliche Unternehmensinformationen, freigegebene Bilder, Beschreibung, Mischtisch-Informationen sowie öffentliche Aktionen oder Angebote umfassen.",
+      "text2": "Anmeldedaten, Authentifizierungsgeheimnisse, Sicherheitsinformationen und interne Verwaltungsinformationen sind nicht für die Öffentlichkeit bestimmt."
+    },
+
+    "guestData": {
+      "title": "Reservierungsdaten der Gäste",
+      "text1": "Reservierungsdaten, die einem Gastgeber über Mischtisch zur Verfügung gestellt werden, dürfen nur im Einklang mit den Bedingungen für Gastgeber und dem geltenden Datenschutzrecht verwendet werden.",
+      "text2": "Für die weitere Verarbeitung von Gästedaten für die eigene Reservierungsverwaltung und Bewirtungsleistungen des Gastgebers handelt der Gastgeber als eigenständiger Verantwortlicher."
+    },
+
+    "retention": {
+      "title": "Empfohlene Aufbewahrung",
+      "items": {
+        "account": {
+          "label": "Gastgeberkonto-/Profildaten:",
+          "text": "für die Dauer der aktiven Teilnahme"
+        },
+        "deactivation": {
+          "label": "Nach endgültiger Deaktivierung:",
+          "text": "betriebliche Löschung grundsätzlich innerhalb von 30 Tagen, sofern keine gesetzlichen oder vertraglichen Aufbewahrungspflichten bestehen"
+        },
+        "images": {
+          "label": "Bilder/öffentliche Inhalte:",
+          "text": "bis zur Löschung oder Deaktivierung des Kontos; begrenzte technische Sicherungskopien können für einen Wiederherstellungszeitraum verbleiben"
+        },
+        "logs": {
+          "label": "Sicherheitsprotokolle:",
+          "text": "grundsätzlich bis zu 30 Tage und länger, wenn dies zur Untersuchung eines konkreten Sicherheitsvorfalls erforderlich ist"
+        },
+        "claims": {
+          "label": "Rechtsansprüche:",
+          "text": "Daten, die speziell zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich sind, können so lange aufbewahrt werden, wie dies für diesen Zweck notwendig ist"
+        }
+      }
+    },
+
+    "rights": {
+      "title": "Rechte",
+      "text1": "Vorbehaltlich der gesetzlichen Voraussetzungen können betroffene Personen Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch haben.",
+      "text2": "Anfragen können an"
+    },
+
+    "complaint": {
+      "title": "Recht auf Beschwerde",
+      "text": "Betroffene Personen können bei einer zuständigen Datenschutzaufsichtsbehörde Beschwerde einlegen."
+    },
+
+    "changes": {
+      "title": "Änderungen dieser Hinweise",
+      "text": "Diese Datenschutzhinweise für Gastgeber werden aktualisiert, wenn sich die Plattform, Dienstleister oder Verarbeitungstätigkeiten ändern."
+    }
+  }
+},
+"privacyPolicy": {
+  "header": {
+    "eyebrow": "Datenschutz & Schutz personenbezogener Daten",
+    "title": "Datenschutzerklärung",
+    "updated": "Zuletzt aktualisiert: August 2026"
+  },
+
+  "contact": {
+    "phone": "Telefon",
+    "email": "E-Mail"
+  },
+
+  "labels": {
+    "recommendation": "Empfehlung:",
+    "technicalRecommendation": "Technische Empfehlung:"
+  },
+
+  "links": {
+    "hostingerPrivacy": "Datenschutzerklärung von Hostinger",
+    "hostingerDpa": "Auftragsverarbeitungsvertrag von Hostinger",
+    "emailjsDpa": "Auftragsverarbeitungsvertrag von EmailJS",
+    "googlePrivacy": "Datenschutzerklärung von Google"
+  },
+
+  "sections": {
+    "controller": {
+      "title": "Verantwortlicher"
+    },
+
+    "general": {
+      "title": "Allgemeiner Grundsatz",
+      "text": "Wir verarbeiten personenbezogene Daten nur, soweit dies für den Betrieb der Plattform, die Abwicklung von Reservierungen, die Verwaltung von Gastgeberkonten, die Absicherung des Dienstes oder zur Erfüllung gesetzlicher Pflichten erforderlich ist. Mischtisch Sachsen verwendet derzeit keine Werbe- oder Analyse-Tracker."
+    },
+
+    "hosting": {
+      "title": "Website-Zugriff und Hosting",
+      "text1": "Die Website",
+      "text2": "wird mit Hostinger gehostet. Beim Zugriff auf die Website können technisch erforderliche Verbindungs- und Serverdaten verarbeitet werden, einschließlich IP-Adresse, Datum/Uhrzeit des Zugriffs, angeforderter Ressource, Browser-/Geräteinformationen sowie technischer Fehler- und Sicherheitsdaten.",
+      "text3": "Diese Verarbeitung ist für einen sicheren, stabilen und technisch erforderlichen Betrieb der Website notwendig und erfolgt auf Grundlage von Artikel 6 Absatz 1 Buchstabe f DSGVO.",
+      "text4": "Hostinger stellt für die erfassten Hosting-Dienste Vereinbarungen zur Datenverarbeitung bereit. Welche konkrete Gesellschaft der Hostinger-Gruppe im Rahmen des Kontovertrags handelt und welche Serverregion für diese Website verwendet wird, hängt von der konfigurierten Hostinger-Account-/Hosting-Vereinbarung ab. Diese Konfiguration sollte intern dokumentiert und bei Änderungen überprüft werden.",
+      "furtherInfo": "Weitere Informationen:",
+      "and": "und"
+    },
+
+    "reservations": {
+      "title": "Reservierungen von Gästen",
+      "text1": "Gäste benötigen kein Konto. Zu den Daten können Vor- und Nachname, E-Mail-Adresse, Telefonnummer, sofern gespeichert die Postanschrift, Anzahl der Plätze, Datum/Uhrzeit, optionale Nachricht, ausgewählter Gastgeber sowie technische Reservierungs-/Bestätigungsdaten gehören.",
+      "text2": "Die Daten werden zur Übermittlung der Reservierung, zur Prüfung der Verfügbarkeit, zur Dokumentation der Reservierung und zum Versand von Transaktions-E-Mails verwendet. Die Verarbeitung erfolgt grundsätzlich auf Grundlage von Artikel 6 Absatz 1 Buchstabe b DSGVO; erforderliche Sicherheits- und Maßnahmen zur Missbrauchsverhinderung können auf Artikel 6 Absatz 1 Buchstabe f DSGVO gestützt werden.",
+      "recommendation": "das Feld für die Postanschrift zu entfernen, sofern es nicht tatsächlich benötigt wird."
+    },
+
+    "selectedHost": {
+      "title": "Weitergabe an den ausgewählten Gastgeber",
+      "text": "Reservierungsdaten werden an den vom Gast ausgewählten Gastgeber weitergegeben. DEHOGA Sachsen e.V. ist für die Verarbeitung verantwortlich, die für den Betrieb der Plattform und die Übermittlung der Reservierung erforderlich ist. Nach Erhalt verarbeitet der ausgewählte Gastgeber die Daten in eigener Verantwortung zur Abwicklung der Reservierung und für seine eigenen Bewirtungsleistungen."
+    },
+
+    "email": {
+      "title": "Reservierungs-E-Mails",
+      "text1": "Nach einer erfolgreichen Reservierung wird eine Bestätigung an den Gast und eine Benachrichtigung an den ausgewählten Gastgeber gesendet. EmailJS wird als technische E-Mail-Integration verwendet, und Gmail von Google ist der mit EmailJS verbundene E-Mail-Dienst.",
+      "text2": "Der E-Mail-Ablauf kann den Namen und die E-Mail-Adresse des Gastes, den ausgewählten Gastgeber, Reservierungsdatum/-zeit, die Anzahl der Plätze und weitere für die Bestätigungsnachricht erforderliche Reservierungsinformationen verarbeiten.",
+      "text3": "EmailJS veröffentlicht einen Auftragsverarbeitungsvertrag. Gmail ist ein Dienst von Google; nach den Datenschutzinformationen von Google ist Google Ireland Limited grundsätzlich für Google-Dienste verantwortlich, die Nutzern im Europäischen Wirtschaftsraum angeboten werden. Google verarbeitet E-Mail-Inhalte und zugehörige technische Informationen, um Gmail bereitzustellen und abzusichern.",
+      "text4": "Die Rechtsgrundlage für transaktionale Reservierungsnachrichten ist grundsätzlich Artikel 6 Absatz 1 Buchstabe b DSGVO; erforderliche Zustellungs- und Sicherheitsverarbeitungen können auf Artikel 6 Absatz 1 Buchstabe f DSGVO gestützt werden.",
+      "furtherInfo": "Weitere Informationen:",
+      "and": "und",
+      "recommendation": "das für produktive Reservierungs-E-Mails verwendete Gmail-Postfach sollte als Geschäftskonto verwaltet werden (vorzugsweise Google Workspace oder ein anderer vertraglich geeigneter geschäftlicher E-Mail-Dienst)."
+    },
+
+    "firebase": {
+      "title": "Google Firebase",
+      "text": "Firebase Authentication wird ausschließlich für Gastgeberkonten verwendet. Google gibt an, dass Firebase Authentication über Rechenzentren in den USA betrieben wird. Cloud Firestore speichert Plattform-, Gastgeber- und Reservierungsdaten, während Cloud Storage für Firebase Gastgeberbilder speichert. Google stellt für relevante internationale Übermittlungen Regelungen zur Datenverarbeitung und Sicherheit sowie Standardvertragsklauseln bereit.",
+      "recommendation": "soweit verfügbar einen Standort innerhalb der EU/des EWR für Firestore und Cloud Storage zu verwenden und zu dokumentieren."
+    },
+
+    "storage": {
+      "title": "Technisch erforderlicher Speicher",
+      "text": "Technisch erforderlicher Browser-Speicher bzw. Tokens können für die Anmeldung und Sitzungsverwaltung von Gastgebern, die Spracheinstellung, Sicherheit sowie notwendige Formular- und Sitzungszustände verwendet werden. Analyse-, Werbe- oder Marketing-Tracker sind derzeit nicht geplant."
+    },
+
+    "automated": {
+      "title": "Keine automatisierte Entscheidungsfindung",
+      "text": "Mischtisch Sachsen verwendet derzeit keine ausschließlich automatisierte Entscheidungsfindung oder Profiling im Sinne von Artikel 22 DSGVO. Eine abschließende Prüfung der Sitzplatzverfügbarkeit stellt kein Profiling von Gästen dar."
+    },
+
+    "retention": {
+      "title": "Empfohlene Aufbewahrung",
+      "items": {
+        "operational": {
+          "label": "Operative Reservierungsdaten:",
+          "text": "bis zu 90 Tage nach dem Reservierungsdatum"
+        },
+        "deletion": "Danach Löschung/Anonymisierung, sofern kein konkreter rechtlicher Bedarf besteht",
+        "logs": {
+          "label": "Sicherheits-/Fehlerprotokolle:",
+          "text": "grundsätzlich bis zu 30 Tage"
+        },
+        "host": {
+          "label": "Gastgeberkonto/-profil:",
+          "text": "während der aktiven Nutzung; betriebliche Löschung grundsätzlich innerhalb von 30 Tagen nach endgültiger Deaktivierung"
+        },
+        "images": {
+          "label": "Gastgeberbilder:",
+          "text": "bis zur Löschung/Deaktivierung, vorbehaltlich begrenzter Sicherungszeiträume"
+        },
+        "email": {
+          "label": "Informationen zur E-Mail-Zustellung:",
+          "text": "nur so lange, wie dies für Zustellung und Fehlerbehebung erforderlich ist"
+        },
+        "dispute": "Daten, die für einen konkreten Rechtsstreit erforderlich sind, können mit eingeschränktem Zugriff so lange gesondert aufbewahrt werden, wie dies erforderlich ist. Die reguläre Verjährungsfrist nach deutschem Zivilrecht beträgt grundsätzlich drei Jahre."
+      }
+    },
+
+    "rights": {
+      "title": "Rechte",
+      "text": "Vorbehaltlich der gesetzlichen Voraussetzungen können betroffene Personen Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch haben. Anfragen können an"
+    },
+
+    "complaint": {
+      "title": "Beschwerde",
+      "text": "Betroffene Personen können bei einer zuständigen Datenschutzaufsichtsbehörde Beschwerde einlegen."
+    },
+
+    "changes": {
+      "title": "Änderungen",
+      "text": "Diese Datenschutzerklärung wird aktualisiert, wenn sich Plattformfunktionen, Dienstleister oder gesetzliche Anforderungen ändern."
+    }
+  }
+}
+}

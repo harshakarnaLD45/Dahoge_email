@@ -1,0 +1,828 @@
+:root {
+  --serif: Georgia, "Iowan Old Style", "Palatino Linotype",
+    "Times New Roman", serif;
+
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  --kobalt: #1f3c8f;
+  --kobalt-dunkel: #16295f;
+  --tinte: #131c33;
+
+  --porzellan: #f5f3ec;
+  --papier: #ffffff;
+
+  --eiche: #7c5230;
+  --eiche-hell: #9a6c42;
+  --honig: #d9a441;
+
+  --linie: #dad4c6;
+  --moos: #4c7a4f;
+}
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+.legal-page-container {
+  background: var(--porzellan);
+
+  color: var(--tinte);
+
+  font-family: var(--sans);
+
+  font-size: 16px;
+
+  line-height: 1.55;
+
+  -webkit-font-smoothing: antialiased;
+
+  max-width: 820px;
+
+  margin: 0 auto;
+
+  padding: 28px 20px 60px;
+
+  /* Prevent content from overflowing */
+  overflow-wrap: break-word;
+
+  word-wrap: break-word;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.eyebrow {
+  font-size: 12px;
+
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+
+  font-weight: 600;
+
+  color: var(--eiche);
+
+  margin-bottom: 6px;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.legal-page-title {
+  font-family: var(--serif);
+
+  font-weight: 600;
+
+  font-size: clamp(26px, 4.5vw, 36px);
+
+  line-height: 1.06;
+
+  margin: 6px 0 10px;
+
+  color: var(--kobalt-dunkel);
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.legal-page-intro {
+  font-size: 17px;
+
+  max-width: 52ch;
+
+  color: #3a4258;
+
+  margin-bottom: 16px;
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   LEGAL CARD
+   ========================================================= */
+
+.legal-card {
+  background: var(--papier);
+
+  border: 1px solid var(--linie);
+
+  border-radius: 16px;
+
+  padding: 20px;
+
+  margin-bottom: 14px;
+
+  /*
+   * Important for mobile:
+   * allows text/grid children to shrink correctly.
+   */
+  min-width: 0;
+
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+  overflow-wrap: break-word;
+
+  word-wrap: break-word;
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.legal-card-title {
+  font-family: var(--serif);
+
+  font-weight: 600;
+
+  font-size: 19px;
+
+  color: var(--kobalt-dunkel);
+
+  margin-bottom: 8px;
+
+  min-width: 0;
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.legal-card-content {
+  font-size: 14.5px;
+
+  color: #3a4258;
+
+  display: grid;
+
+  gap: 8px;
+
+  line-height: 1.6;
+
+  min-width: 0;
+
+  max-width: 100%;
+
+  overflow-wrap: break-word;
+
+  word-break: normal;
+}
+
+
+.legal-card-content div {
+  line-height: 1.6;
+
+  min-width: 0;
+
+  max-width: 100%;
+
+  overflow-wrap: break-word;
+}
+
+
+.legal-card-content b {
+  font-weight: 600;
+
+  color: var(--tinte);
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   DASHED NOTICE
+   ========================================================= */
+
+.legal-dashed {
+  border: 1px dashed #9aa0b4;
+
+  border-radius: 8px;
+
+  padding: 8px 10px;
+
+  color: #6a7288;
+
+  font-size: 13.5px;
+
+  line-height: 1.6;
+
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   ENGLISH SUMMARY
+   ========================================================= */
+
+.legal-summary-box {
+  background: #eef1fa !important;
+
+  border-color: var(--kobalt) !important;
+
+  max-width: 100%;
+
+  overflow-wrap: break-word;
+}
+
+
+.legal-summary-box b {
+  color: var(--kobalt-dunkel);
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   IMAGE RIGHTS
+   ========================================================= */
+
+.legal-image-rights {
+  margin: 8px 0 0 !important;
+
+  padding-left: 20px !important;
+
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+  overflow-wrap: break-word;
+}
+
+
+.legal-image-rights li {
+  font-size: 14.5px;
+
+  color: #3a4258;
+
+  line-height: 1.6;
+
+  margin-bottom: 4px;
+
+  overflow-wrap: break-word;
+
+  word-break: normal;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.legal-page-container a {
+  color: var(--kobalt);
+
+  text-decoration: none;
+
+  transition: color 0.15s ease;
+
+  overflow-wrap: anywhere;
+}
+
+
+.legal-page-container a:hover {
+  color: var(--kobalt-dunkel);
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE SAFETY
+   769px+
+   
+   Desktop appearance remains unchanged.
+   These only prevent accidental overflow.
+   ========================================================= */
+
+.legal-page-container,
+.legal-card,
+.legal-card-content,
+.legal-dashed,
+.legal-summary-box {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   TABLET
+   768px AND BELOW
+
+   Existing visual design is retained,
+   only dimensions become responsive.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .legal-page-container {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 24px 16px 50px;
+
+    box-sizing: border-box;
+  }
+
+
+  .legal-page-title {
+    font-size: clamp(24px, 5vw, 32px);
+
+    line-height: 1.08;
+  }
+
+
+  .legal-page-intro {
+    font-size: 16px;
+
+    max-width: 100%;
+  }
+
+
+  .legal-card {
+    width: 100%;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    margin-bottom: 14px;
+  }
+
+
+  .legal-card-title {
+    font-size: 18px;
+
+    line-height: 1.25;
+  }
+
+
+  .legal-card-content {
+    width: 100%;
+
+    font-size: 14px;
+
+    gap: 6px;
+
+    line-height: 1.6;
+  }
+
+
+  .legal-card-content div {
+    line-height: 1.6;
+  }
+
+
+  .legal-dashed {
+    width: 100%;
+
+    font-size: 13px;
+
+    padding: 8px 9px;
+  }
+
+
+  .legal-image-rights {
+    padding-left: 20px !important;
+
+    width: 100%;
+  }
+
+
+  .legal-image-rights li {
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    margin-bottom: 4px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   480px AND BELOW
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .legal-page-container {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 20px 14px 40px;
+  }
+
+
+  .eyebrow {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    line-height: 1.4;
+
+    margin-bottom: 5px;
+  }
+
+
+  .legal-page-title {
+    font-size: clamp(22px, 6vw, 28px);
+
+    line-height: 1.1;
+
+    margin: 4px 0 8px;
+  }
+
+
+  .legal-page-intro {
+    width: 100%;
+
+    max-width: 100%;
+
+    font-size: 15px;
+
+    line-height: 1.55;
+
+    margin-bottom: 12px;
+  }
+
+
+  .legal-card {
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    margin-bottom: 12px;
+  }
+
+
+  .legal-card-title {
+    font-size: 17px;
+
+    line-height: 1.25;
+
+    margin-bottom: 6px;
+  }
+
+
+  .legal-card-content {
+    width: 100%;
+
+    font-size: 13.5px;
+
+    gap: 5px;
+
+    line-height: 1.6;
+  }
+
+
+  .legal-card-content div {
+    line-height: 1.6;
+  }
+
+
+  .legal-card-content b {
+    font-weight: 600;
+  }
+
+
+  .legal-dashed {
+    width: 100%;
+
+    font-size: 12.5px;
+
+    line-height: 1.55;
+
+    padding: 7px 8px;
+
+    border-radius: 7px;
+  }
+
+
+  .legal-image-rights {
+    width: 100%;
+
+    padding-left: 17px !important;
+
+    margin-top: 7px !important;
+  }
+
+
+  .legal-image-rights li {
+    font-size: 13.5px;
+
+    line-height: 1.55;
+
+    margin-bottom: 3px;
+
+    padding-left: 1px;
+  }
+
+
+  .legal-page-container a {
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   360px AND BELOW
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .legal-page-container {
+    width: 100%;
+
+    padding: 18px 12px 36px;
+  }
+
+
+  .eyebrow {
+    font-size: 10.5px;
+
+    letter-spacing: 1.5px;
+
+    line-height: 1.35;
+  }
+
+
+  .legal-page-title {
+    font-size: clamp(20px, 7vw, 26px);
+
+    line-height: 1.1;
+  }
+
+
+  .legal-page-intro {
+    font-size: 14.5px;
+
+    line-height: 1.55;
+  }
+
+
+  .legal-card {
+    padding: 12px;
+
+    border-radius: 8px;
+
+    margin-bottom: 10px;
+  }
+
+
+  .legal-card-title {
+    font-size: 16px;
+
+    line-height: 1.25;
+
+    margin-bottom: 6px;
+  }
+
+
+  .legal-card-content {
+    font-size: 13px;
+
+    gap: 5px;
+
+    line-height: 1.58;
+  }
+
+
+  .legal-card-content div {
+    line-height: 1.58;
+  }
+
+
+  .legal-dashed {
+    font-size: 12px;
+
+    line-height: 1.55;
+
+    padding: 6px 7px;
+
+    border-radius: 6px;
+  }
+
+
+  .legal-image-rights {
+    padding-left: 16px !important;
+  }
+
+
+  .legal-image-rights li {
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 3px;
+  }
+}
+
+
+/* =========================================================
+   320px - EXTRA SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 320px) {
+
+  .legal-page-container {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 16px 10px 32px;
+  }
+
+
+  .eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 1.25px;
+  }
+
+
+  .legal-page-title {
+    font-size: 21px;
+
+    line-height: 1.12;
+  }
+
+
+  .legal-page-intro {
+    font-size: 14px;
+
+    line-height: 1.55;
+  }
+
+
+  .legal-card {
+    width: 100%;
+
+    padding: 11px;
+
+    border-radius: 8px;
+
+    margin-bottom: 10px;
+  }
+
+
+  .legal-card-title {
+    font-size: 15.5px;
+
+    line-height: 1.25;
+  }
+
+
+  .legal-card-content {
+    font-size: 12.75px;
+
+    gap: 5px;
+
+    line-height: 1.55;
+  }
+
+
+  .legal-card-content div {
+    line-height: 1.55;
+  }
+
+
+  .legal-dashed {
+    font-size: 11.75px;
+
+    padding: 6px;
+
+    line-height: 1.5;
+  }
+
+
+  .legal-image-rights {
+    padding-left: 15px !important;
+  }
+
+
+  .legal-image-rights li {
+    font-size: 12.75px;
+
+    line-height: 1.5;
+
+    margin-bottom: 3px;
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1920px+
+   
+   KEEP EXISTING DESIGN
+   ========================================================= */
+
+@media (min-width: 1920px) {
+
+  .legal-page-container {
+    max-width: 820px;
+  }
+}
+
+
+/* =========================================================
+   ULTRA WIDE
+   2560px+
+   
+   KEEP EXISTING DESIGN
+   ========================================================= */
+
+@media (min-width: 2560px) {
+
+  .legal-page-container {
+    max-width: 900px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.legal-page-container a:focus {
+  outline: 2px solid var(--kobalt);
+
+  outline-offset: 2px;
+
+  border-radius: 2px;
+}
+
+
+.legal-page-container a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+.legal-page-container a:focus-visible {
+  outline: 2px solid var(--kobalt);
+
+  outline-offset: 2px;
+
+  border-radius: 2px;
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  .legal-page-container {
+    max-width: 100%;
+
+    padding: 0;
+  }
+
+
+  .legal-card {
+    border: 1px solid var(--linie);
+
+    box-shadow: none;
+
+    break-inside: avoid;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .legal-page-container a {
+    transition: none;
+  }
+}

@@ -1,0 +1,1707 @@
+.mt-wrap {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: var(--tinte);
+}
+
+/* =========================================================
+   HOST HEADER
+   ========================================================= */
+
+.mt-wrap > div:first-child {
+  width: 100%;
+}
+
+.mt-wrap .eyebrow {
+  margin: 0 0 6px;
+  color: var(--eiche);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.mt-wrap .f-display {
+  font-family: var(--serif);
+  font-weight: 600;
+}
+
+/* =========================================================
+   NOTICE
+   ========================================================= */
+
+.mt-wrap .notice {
+  color: #6a7288;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.mt-wrap .notice b {
+  color: var(--tinte);
+}
+
+/* =========================================================
+   TABBAR
+   ========================================================= */
+
+.mt-wrap .tabbar {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--linie);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.mt-wrap .tab {
+  all: unset;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #6a7288;
+  padding: 10px 14px;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.mt-wrap .tab:hover {
+  color: var(--tinte);
+}
+
+.mt-wrap .tab.on {
+  color: var(--kobalt-dunkel);
+  border-bottom-color: var(--kobalt);
+}
+
+/* =========================================================
+   TAB PANEL
+   ========================================================= */
+
+.mt-wrap .tabpanel {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.mt-wrap .card {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  background: var(--papier);
+  border: 1px solid var(--linie);
+  border-radius: 16px;
+}
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.mt-wrap .label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--tinte);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.mt-wrap .input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: var(--sans);
+  color: var(--tinte);
+  background: var(--papier);
+  border: 1px solid var(--linie);
+  border-radius: 8px;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.mt-wrap .input:focus {
+  outline: none;
+  border-color: var(--kobalt);
+  box-shadow: 0 0 0 3px rgba(24, 59, 112, 0.08);
+}
+
+.mt-wrap .input::placeholder {
+  color: #999eaa;
+}
+
+.mt-wrap .input.field-err {
+  border-color: #b4443c;
+}
+
+.mt-wrap .field-error {
+  margin-top: 4px;
+  color: #b4443c;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.mt-wrap .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  min-width: 0;
+  width: 100%;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.mt-wrap .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 80px;
+  min-height: 36px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.mt-wrap .btn:focus,
+.mt-wrap .tab:focus {
+  outline: 2px solid var(--kobalt);
+  outline-offset: 2px;
+}
+
+.mt-wrap .btn:focus:not(:focus-visible),
+.mt-wrap .tab:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.mt-wrap .btn:focus-visible,
+.mt-wrap .tab:focus-visible {
+  outline: 2px solid var(--kobalt);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   SMALL BUTTONS
+   ========================================================= */
+
+.mt-wrap .btn-sm {
+  min-width: 80px;
+  min-height: 50px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.mt-wrap .btn-primary {
+  background: var(--kobalt);
+  border: none;
+  color: #fff;
+}
+
+.mt-wrap .btn-primary:hover {
+  background: var(--kobalt-dunkel);
+  opacity: 0.9;
+}
+
+.mt-wrap .btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   GHOST BUTTON
+   ========================================================= */
+
+.mt-wrap .btn-ghost {
+  background: transparent;
+  color: inherit;
+  border: 1px solid currentColor;
+}
+
+.mt-wrap .btn-ghost:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* =========================================================
+   DANGER BUTTON
+   ========================================================= */
+
+.mt-wrap .btn-danger {
+  background: #b4443c;
+  border: none;
+  color: #fff;
+  width:"30px";
+  height:"20px";
+  border-radius: "12px";
+}
+
+.mt-wrap .btn-danger:hover {
+  background: #96362f;
+  opacity: 0.95;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-box {
+  max-width: 420px;
+  width: 90%;
+}
+
+
+/* =========================================================
+   RESERVATIONs
+   ========================================================= */
+
+.mt-wrap .mt-section {
+  background: #ffffff;
+  border: 1px solid #ddd5c8;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(32, 42, 65, 0.08);
+}
+
+/* Reservation section */
+
+.mt-wrap .mt-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.mt-wrap .mt-section-title.lg {
+  margin: 0 0 5px;
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #14315c;
+}
+
+.mt-wrap .mt-section-subtitle {
+  margin: 0;
+  color: #71809a;
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+/* Number badge */
+
+.mt-wrap .count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  background: #eef0f5;
+  color: #34415a;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+/* Reservation body */
+
+.mt-wrap .mt-section-body {
+  display: block;
+}
+
+/* Groups */
+
+.mt-wrap .res-groups {
+  width: 100%;
+}
+
+.mt-wrap .res-group {
+  width: 100%;
+}
+
+/* Date heading */
+
+.mt-wrap .res-group-label {
+  position: relative;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 0 0 6px;
+
+  margin: 0 0 10px;
+
+  border-bottom: 1px solid #e6dfd3;
+
+  color: #173b70;
+
+  font-family: var(--sans);
+  font-size: 9.5px;
+  font-weight: 700;
+}
+
+/* Reservation list */
+
+.mt-wrap .res-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  margin-bottom: 10px;
+}
+
+/* Individual reservation */
+
+.mt-wrap .res-row {
+  display: grid;
+
+  grid-template-columns: 180px minmax(0, 1fr) 100px;
+
+  align-items: center;
+
+  gap: 16px;
+
+  width: 100%;
+  min-height: 58px;
+
+  box-sizing: border-box;
+
+  padding: 10px 12px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3d9c9;
+  border-radius: 9px;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.mt-wrap .res-row:hover {
+  border-color: #d6c9b7;
+  box-shadow: 0 2px 8px rgba(20, 49, 92, 0.04);
+}
+
+/* LEFT SIDE */
+
+.mt-wrap .res-time-area {
+  min-width: 0;
+}
+
+.mt-wrap .res-row-time {
+  margin: 0 0 6px;
+
+  color: #14315c;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+/* Chair chip */
+
+.mt-wrap .res-chip {
+  display: inline-flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  padding: 3px 7px;
+
+  background: #fffaf3;
+
+  border: 1px solid #eadcc8;
+  border-radius: 999px;
+
+  color: #71809a;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+/* MIDDLE */
+
+.mt-wrap .res-guest-area {
+  min-width: 0;
+}
+
+.mt-wrap .res-guest {
+  margin: 0 0 3px;
+
+  color: #14315c;
+
+  font-size: 10.5px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.mt-wrap .res-contact {
+  margin: 1px 0;
+
+  color: #71809a;
+
+  font-size: 8px;
+  line-height: 1.35;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mt-wrap .res-contact a {
+  color: #536f9b;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+}
+
+.mt-wrap .res-contact a:hover {
+  color: #14315c;
+}
+
+/* Promotion */
+
+.mt-wrap .res-promotion {
+  margin-top: 4px;
+
+  color: var(--eiche);
+
+  font-size: 8.5px;
+  line-height: 1.3;
+}
+
+/* Message */
+
+.mt-wrap .res-note {
+  margin-top: 4px;
+
+  color: #596276;
+
+  font-size: 8.5px;
+  line-height: 1.3;
+}
+
+/* RIGHT SIDE */
+
+.mt-wrap .res-status {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  min-width: 0;
+}
+
+/* Green confirmed pill */
+
+.mt-wrap .status-pill.confirmed {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  box-sizing: border-box;
+
+  min-width: 53px;
+  height: 17px;
+
+  padding: 0 7px;
+
+  border-radius: 999px;
+
+  background: #eaf6ee;
+
+  color: #247343;
+
+  font-size: 7.5px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+/* Green dot */
+
+.mt-wrap .status-dot {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #238044;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   DATE SPACING
+   ========================================================= */
+
+.mt-wrap .res-group + .res-group {
+  margin-top: 10px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .mt-wrap .res-row {
+    grid-template-columns: 150px minmax(0, 1fr) 90px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .mt-wrap .res-row {
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+  }
+
+  .mt-wrap .res-time-area {
+    grid-column: 1;
+  }
+
+  .mt-wrap .res-guest-area {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .mt-wrap .res-status {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .mt-wrap .mt-section {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .mt-wrap .mt-section-title.lg {
+    font-size: 19px;
+  }
+
+  .mt-wrap .res-row {
+    padding: 9px 10px;
+  }
+
+  .mt-wrap .res-row-time {
+    font-size: 10px;
+  }
+
+  .mt-wrap .res-guest {
+    font-size: 10px;
+  }
+
+  .mt-wrap .res-contact {
+    font-size: 8px;
+  }
+
+  .mt-wrap .status-pill.confirmed {
+    min-width: 50px;
+    height: 16px;
+    font-size: 7px;
+  }
+}
+/* =========================================================
+   RESPONSIVE (ORIGINAL)
+   ========================================================= */
+
+@media (min-width: 2560px) {
+  .mt-wrap {
+    max-width: 1180px;
+  }
+
+  .mt-wrap .card {
+    border-radius: 18px;
+  }
+
+  .mt-wrap .btn {
+    min-height: 40px;
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+
+  .mt-wrap .input {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .mt-wrap {
+    max-width: 1180px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .mt-wrap {
+    max-width: 1180px;
+  }
+}
+
+/* =========================================================
+   TABLETS / SMALL LAPTOPS
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .mt-wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mt-wrap .form-grid {
+    gap: 12px;
+  }
+
+  .mt-wrap .label {
+    font-size: 12.5px;
+  }
+
+  .mt-wrap .input {
+    padding: 9px 11px;
+    font-size: 13.5px;
+  }
+
+  .mt-wrap .btn-sm {
+    padding: 5px 10px;
+    min-height: 28px;
+    border-radius: 5px;
+  }
+
+  .mt-wrap .card {
+    border-radius: 12px;
+  }
+}
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .mt-wrap .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .mt-wrap .label {
+    font-size: 12px;
+  }
+
+  .mt-wrap .input {
+    padding: 9px 11px;
+    font-size: 13.5px;
+  }
+
+  .mt-wrap .btn-sm {
+    font-size: 12px;
+    padding: 4px 8px;
+    min-height: 26px;
+    min-width: 50px;
+  }
+
+  .mt-wrap .notice {
+    font-size: 11.5px;
+  }
+
+  .mt-wrap .card {
+    border-radius: 10px;
+  }
+
+  .mt-wrap .tab {
+    font-size: 13px;
+    padding: 9px 11px;
+  }
+}
+
+/* =========================================================
+   PHABLETS
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .mt-wrap .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mt-wrap .btn {
+    min-width: 0;
+  }
+
+  .mt-wrap .tabbar {
+    flex-wrap: nowrap;
+  }
+}
+
+/* =========================================================
+   LARGE PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .mt-wrap .form-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .mt-wrap .label {
+    font-size: 11.5px;
+  }
+
+  .mt-wrap .input {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .mt-wrap .btn-sm {
+    font-size: 11px;
+    padding: 3px 7px;
+    min-height: 24px;
+    min-width: 45px;
+  }
+
+  .mt-wrap .notice {
+    font-size: 10.5px;
+  }
+
+  .mt-wrap .card {
+    border-radius: 8px;
+  }
+
+  .mt-wrap .tabbar {
+    gap: 4px;
+  }
+
+  .mt-wrap .tab {
+    flex: 0 0 auto;
+    font-size: 12.5px;
+    padding: 8px 9px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .mt-wrap .form-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .mt-wrap .label {
+    font-size: 10.5px;
+  }
+
+  .mt-wrap .input {
+    padding: 7px 9px;
+    font-size: 12.5px;
+  }
+
+  .mt-wrap .btn {
+    font-size: 12.5px;
+    padding: 6px 10px;
+    min-height: 32px;
+    min-width: 0;
+  }
+
+  .mt-wrap .btn-sm {
+    font-size: 10px;
+    padding: 2px 6px;
+    min-height: 22px;
+    min-width: 40px;
+  }
+
+  .mt-wrap .notice {
+    font-size: 10px;
+    margin-top: 8px;
+  }
+
+  .mt-wrap .card {
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .mt-wrap .tab {
+    font-size: 11.5px;
+    padding: 7px 8px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .mt-wrap * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   Page head: "My Mischtisch" + subtitle
+--------------------------------------------------------- */
+
+.mt-wrap .mt-head {
+  margin-bottom: 18px;
+}
+
+.mt-wrap .mt-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(22px, 3.4vw, 28px);
+  line-height: 1.2;
+  color: var(--kobalt-dunkel, #14315c);
+  margin: 0 0 6px;
+}
+
+.mt-wrap .mt-subtitle {
+  margin: 0;
+  color: #6a7288;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ---------------------------------------------------------
+   Section list + section card
+--------------------------------------------------------- */
+
+.mt-wrap .mt-sections {
+  display: grid;
+  gap: 16px;
+}
+
+.mt-wrap .mt-section {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.mt-wrap .mt-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.mt-wrap .mt-section-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--kobalt-dunkel, #14315c);
+  margin: 0 0 4px;
+}
+
+.mt-wrap .mt-section-subtitle {
+  margin: 0;
+  color: #6a7288;
+  font-size: 12.5px;
+  line-height: 1.5;
+  max-width: 60ch;
+}
+
+.mt-wrap .mt-section-body {
+  display: grid;
+  gap: 16px;
+}
+
+.mt-wrap .mt-section-body > .label:first-child {
+  margin-top: 0;
+}
+
+/* Two-column row inside a section (e.g. table shape / seats) */
+.mt-wrap .mt-row-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  align-items: start;
+  min-width: 0;
+}
+
+/* Read-only / display value box (e.g. current table shape) */
+.mt-wrap .static-box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: var(--sans);
+  color: #6a7288;
+  background: var(--sand, #f4f1ea);
+  border: 1px solid var(--linie);
+  border-radius: 8px;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------------------------
+   Photos drop zone
+--------------------------------------------------------- */
+
+.mt-wrap .photo-drop {
+  border: 1.5px dashed var(--kobalt, #6a86b8);
+  border-radius: 10px;
+  padding: 18px;
+  background: rgba(24, 59, 112, 0.03);
+}
+
+.mt-wrap .photo-drop .btn-ghost {
+  border-color: var(--kobalt, #1b3a6b);
+  color: var(--kobalt, #1b3a6b);
+}
+
+.mt-wrap .photo-drop .btn-ghost:hover {
+  background: rgba(24, 59, 112, 0.06);
+}
+
+/* Photo tiles (populated state) */
+.mt-wrap .foto-kachel {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--linie);
+  background: var(--papier);
+}
+
+.mt-wrap .foto-kachel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mt-wrap .foto-weg {
+  all: unset;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(20, 49, 92, 0.85);
+  color: #fff;
+  font-size: 11px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.mt-wrap .foto-haupt {
+  all: unset;
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  box-sizing: border-box;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--kobalt-dunkel, #14315c);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.mt-wrap .foto-haupt.on {
+  background: var(--kobalt-dunkel, #14315c);
+  color: #fff;
+}
+
+/* ---------------------------------------------------------
+   Day / time chips (DayChips + SlotEditor)
+--------------------------------------------------------- */
+
+.mt-wrap .chip {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 6px 13px;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--kobalt-dunkel, #14315c);
+  background: var(--papier);
+  border: 1px solid var(--kobalt, #1b3a6b);
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.mt-wrap .chip:hover:not(.on) {
+  background: rgba(20, 49, 92, 0.06);
+}
+
+.mt-wrap .chip.on {
+  background: var(--kobalt-dunkel, #14315c);
+  border-color: var(--kobalt-dunkel, #14315c);
+  color: #fff;
+}
+
+.mt-wrap .chip:focus-visible {
+  outline: 2px solid var(--kobalt);
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------
+   Weekly bookable times — per-day cards
+--------------------------------------------------------- */
+
+.mt-wrap .day-slot-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.mt-wrap .day-slot-card {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 20px;
+
+  padding: 16px 20px;
+
+  background: var(--sand, #f7f3ea);
+  border: 1px solid var(--linie);
+  border-radius: 12px;
+}
+
+.mt-wrap .day-slot-label {
+  display: block !important;
+  visibility: visible !important;
+
+  width: 150px;
+  min-width: 150px;
+
+  margin: 0 !important;
+
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.3;
+
+  color: var(--kobalt-dunkel, #14315c) !important;
+
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------
+   Sticky save bar
+--------------------------------------------------------- */
+
+.mt-wrap .mt-save-bar {
+  position: static;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 14px 20px;
+  background: var(--papier);
+  border: 1px solid var(--linie);
+  border-radius: 14px;
+  box-shadow: 0 -6px 18px rgba(20, 30, 55, 0.06);
+}
+
+/* =========================================================================
+   MY MISCHTISCH — responsive (320px – 2560px)
+   ========================================================================= */
+
+@media (min-width: 2560px) {
+  .mt-wrap .mt-sections {
+    gap: 20px;
+  }
+
+  .mt-wrap .mt-section {
+    padding: 26px;
+  }
+
+  .mt-wrap .mt-title {
+    margin-bottom: 8px;
+  }
+
+  .mt-wrap .mt-section-title {
+    font-size: 19px;
+  }
+
+  .mt-wrap .mt-section-subtitle {
+    font-size: 13px;
+  }
+
+  .mt-wrap .chip {
+    padding: 7px 15px;
+    font-size: 13px;
+  }
+
+  .mt-wrap .day-slot-card {
+    padding: 18px 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mt-wrap .mt-section {
+    padding: 18px;
+  }
+
+  .mt-wrap .mt-section-head {
+    margin-bottom: 14px;
+  }
+
+  .mt-wrap .mt-row-2 {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mt-wrap .mt-sections {
+    gap: 14px;
+  }
+
+  .mt-wrap .mt-section {
+    padding: 16px;
+  }
+
+  .mt-wrap .mt-title {
+    font-size: clamp(20px, 5vw, 24px);
+  }
+
+  .mt-wrap .mt-subtitle {
+    font-size: 12.5px;
+  }
+
+  .mt-wrap .mt-section-title {
+    font-size: 16.5px;
+  }
+
+  .mt-wrap .mt-section-subtitle {
+    font-size: 12px;
+  }
+
+  .mt-wrap .mt-section-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mt-wrap .mt-section-head .btn {
+    align-self: flex-start;
+  }
+
+  .mt-wrap .day-slot-card {
+    padding: 12px 14px;
+  }
+
+  .mt-wrap .mt-save-bar {
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mt-wrap .mt-row-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .mt-wrap .mt-head {
+    margin-bottom: 14px;
+  }
+
+  .mt-wrap .mt-title {
+    font-size: clamp(19px, 6.5vw, 22px);
+  }
+
+  .mt-wrap .mt-subtitle {
+    font-size: 11.5px;
+  }
+
+  .mt-wrap .mt-sections {
+    gap: 12px;
+  }
+
+  .mt-wrap .mt-section {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .mt-wrap .mt-section-title {
+    font-size: 15px;
+  }
+
+  .mt-wrap .mt-section-subtitle {
+    font-size: 11px;
+  }
+
+  .mt-wrap .static-box {
+    font-size: 13px;
+    padding: 9px 11px;
+  }
+
+  .mt-wrap .photo-drop {
+    padding: 14px;
+  }
+
+  .mt-wrap .chip {
+    padding: 5px 11px;
+    font-size: 11.5px;
+  }
+
+  .mt-wrap .day-slot-list {
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .mt-wrap .day-slot-card {
+    padding: 11px 12px;
+    border-radius: 10px;
+  }
+
+  .mt-wrap .day-slot-label {
+    font-size: 12.5px;
+    margin-bottom: 8px;
+  }
+
+  .mt-wrap .mt-save-bar {
+    padding: 11px 14px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .mt-wrap .mt-section {
+    padding: 12px;
+  }
+
+  .mt-wrap .mt-section-title {
+    font-size: 14px;
+  }
+
+  .mt-wrap .chip {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  .mt-wrap .day-slot-card {
+    padding: 10px;
+  }
+
+  .mt-wrap .mt-save-bar {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .mt-wrap .mt-save-bar .btn {
+    width: 100%;
+  }
+}
+/* =========================================================
+   WEEKDAY CHIPS
+   ========================================================= */
+
+.mt-wrap .chip {
+  all: unset;
+  box-sizing: border-box !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: auto !important;
+  min-width: 92px !important;
+  height: 40px !important;
+
+  padding: 0 18px !important;
+  margin: 0 !important;
+
+  border: 1px solid var(--kobalt, #1b3a6b) !important;
+  border-radius: 999px !important;
+
+  background: var(--papier, #fff) !important;
+  color: var(--kobalt-dunkel, #14315c) !important;
+
+  font-family: var(--sans) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+
+  text-align: center !important;
+  white-space: nowrap !important;
+
+  cursor: pointer !important;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.mt-wrap .chip.on {
+  background: var(--kobalt-dunkel, #14315c) !important;
+  border-color: var(--kobalt-dunkel, #14315c) !important;
+  color: #fff !important;
+}
+
+.mt-wrap .chip:hover:not(.on) {
+  background: rgba(20, 49, 92, 0.06) !important;
+  color: var(--kobalt-dunkel, #14315c) !important;
+}
+
+.mt-wrap .chip:focus-visible {
+  outline: 2px solid var(--kobalt) !important;
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   WEEKLY DAY LIST
+   ========================================================= */
+
+.mt-wrap .day-slot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 14px;
+}
+
+
+/* =========================================================
+   DAY CARD
+   ========================================================= */
+
+.mt-wrap .day-slot-card {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+
+  /* IMPORTANT:
+     Day name should be above SlotEditor,
+     not beside it.
+  */
+  display: block !important;
+
+  padding: 14px !important;
+
+  background: var(--sand, #f7f3ea);
+  border: 1px solid var(--linie);
+  border-radius: 12px;
+}
+
+
+/* =========================================================
+   DAY NAME
+   ========================================================= */
+
+.mt-wrap .day-slot-label {
+  display: block !important;
+
+  width: auto !important;
+  min-width: 0 !important;
+
+  margin: 0 0 10px 0 !important;
+
+  font-family: var(--serif);
+  font-weight: 700;
+
+  font-size: 13px !important;
+  line-height: 1.3;
+
+  color: var(--kobalt-dunkel, #14315c) !important;
+
+  white-space: nowrap !important;
+}
+
+
+/* =========================================================
+   SLOT EDITOR
+   ========================================================= */
+
+.mt-wrap .day-slot-card > .slot-editor {
+  width: 100%;
+}
+
+
+/* =========================================================
+   FROM / TO / INTERVAL
+   ========================================================= */
+
+.mt-wrap .day-slot-card .slot-editor-controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+
+/* Individual field */
+
+.mt-wrap .day-slot-card .slot-editor-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+
+/* Field labels */
+
+.mt-wrap .day-slot-card .slot-editor-field label {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--tinte);
+}
+
+
+/* Time / select inputs */
+
+.mt-wrap .day-slot-card .slot-editor-field input,
+.mt-wrap .day-slot-card .slot-editor-field select {
+  width: 100%;
+  min-width: 0;
+  height: 43px;
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  background: #fff;
+  color: var(--kobalt-dunkel, #14315c);
+
+  border: 1px solid var(--linie);
+  border-radius: 9px;
+
+  font-family: var(--sans);
+  font-size: 14px;
+
+  outline: none;
+}
+
+.mt-wrap .day-slot-card .slot-editor-field input:focus,
+.mt-wrap .day-slot-card .slot-editor-field select:focus {
+  border-color: var(--kobalt);
+  box-shadow: 0 0 0 3px rgba(24, 59, 112, 0.08);
+}
+
+
+/* =========================================================
+   TIME SLOT CHIPS
+   ========================================================= */
+
+.mt-wrap .day-slot-card .slot-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+
+  margin-top: 9px;
+}
+
+
+.mt-wrap .day-slot-card .slot-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 40px;
+  height: 30px;
+
+  padding: 0 10px;
+
+  box-sizing: border-box;
+
+  border-radius: 999px;
+
+  background: var(--kobalt-dunkel, #14315c);
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   UNAVAILABLE / REMOVE BUTTON
+   ========================================================= */
+
+.mt-wrap .day-slot-card .slot-editor-remove {
+  margin-top: 9px;
+
+  height: 34px;
+  padding: 0 13px;
+
+  background: #fff;
+  color: #d63c35;
+
+  border: 1px solid #ef9d9d;
+  border-radius: 8px;
+
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.mt-wrap .day-slot-card .slot-editor-remove:hover {
+  background: #fff5f5;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .mt-wrap .chip {
+    min-width: 88px !important;
+    height: 38px !important;
+    padding: 0 15px !important;
+    font-size: 13px !important;
+  }
+
+  .mt-wrap .day-slot-card {
+    padding: 13px !important;
+  }
+
+  .mt-wrap .day-slot-card .slot-editor-controls {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .mt-wrap .day-slot-card .slot-editor-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .mt-wrap .day-slot-card .slot-editor-field input,
+  .mt-wrap .day-slot-card .slot-editor-field select {
+    height: 40px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .mt-wrap .chip {
+    min-width: 82px !important;
+    height: 36px !important;
+    padding: 0 12px !important;
+    font-size: 12px !important;
+  }
+
+  .mt-wrap .day-slot-card {
+    padding: 12px !important;
+    border-radius: 10px;
+  }
+
+  .mt-wrap .day-slot-label {
+    font-size: 13px !important;
+    margin-bottom: 9px !important;
+  }
+
+  .mt-wrap .day-slot-card .slot-list {
+    gap: 6px;
+  }
+
+  .mt-wrap .day-slot-card .slot-chip {
+    min-width: 38px;
+    height: 28px;
+    font-size: 10.5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mt-wrap .chip {
+    transition-duration: 0.001ms !important;
+  }
+
+ 
+}
