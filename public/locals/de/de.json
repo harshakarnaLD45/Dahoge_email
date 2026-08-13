@@ -250,7 +250,7 @@
       "oneSeat": "1 Platz",
       "multipleSeats": "{{count}} Plätze",
       "atTable": "am Mischtisch im",
-      "hour": " Uhr",
+      "hour": "",
       "chair": "Stuhl",
       "print": "Als PDF speichern",
       "calendar": "In den Kalender übernehmen",
