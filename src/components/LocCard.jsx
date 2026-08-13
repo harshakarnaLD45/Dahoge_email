@@ -297,13 +297,9 @@ export function LocCard({ loc, todayKey, onOpen }) {
                 color: "#65708A",
               }}
             >
-              {t(
-                "Kein Bild verfügbar",
-                {
-                  defaultValue:
-                    "Kein Bild verfügbar",
-                },
-              )}
+              {t("locCard.noImage", {
+                defaultValue: "Kein Bild verfügbar",
+              })}
             </span>
           </div>
         )}
@@ -434,8 +430,8 @@ export function LocCard({ loc, todayKey, onOpen }) {
                   whiteSpace: "nowrap",
                 }}
               >
-                {t("PROMOTION", {
-                  defaultValue: "PROMOTION",
+                {t("locCard.promotion", {
+                  defaultValue: "Promotion",
                 })}
               </span>
 
@@ -544,9 +540,8 @@ export function LocCard({ loc, todayKey, onOpen }) {
                   marginBottom: 2,
                 }}
               >
-                {t("Mischtisch Offer", {
-                  defaultValue:
-                    "Mischtisch Offer",
+                {t("locCard.offer", {
+                  defaultValue: "Mischtisch Offer",
                 })}
               </div>
 
@@ -586,9 +581,8 @@ export function LocCard({ loc, todayKey, onOpen }) {
           title={
             configured
               ? ""
-              : t("Noch nicht buchbar", {
-                  defaultValue:
-                    "Noch nicht buchbar",
+              : t("locCard.notBookable", {
+                  defaultValue: "Noch nicht buchbar",
                 })
           }
           onClick={() => {
@@ -620,9 +614,8 @@ export function LocCard({ loc, todayKey, onOpen }) {
               "background-color 0.2s ease, transform 0.2s ease",
           }}
         >
-          {t("Platz wählen", {
-            defaultValue:
-              "Platz wählen",
+          {t("locCard.chooseSeat", {
+            defaultValue: "Platz wählen",
           })}
         </button>
       </div>

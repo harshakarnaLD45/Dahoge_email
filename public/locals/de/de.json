@@ -308,6 +308,13 @@
       "R10": "Rund · 10 Plätze"
     }
   },
+  "locCard": {
+    "noImage": "Kein Bild verfügbar",
+    "promotion": "Aktion",
+    "offer": "Mischtisch-Angebot",
+    "notBookable": "Noch nicht buchbar",
+    "chooseSeat": "Platz wählen"
+  },
   "dates": {
     "daily": "täglich",
     "days": {

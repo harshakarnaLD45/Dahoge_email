@@ -64,7 +64,7 @@ export function HomePage({ locations, onOpen, onHost }) {
 
             <h1 className="h1">
               {t("home.hero.titleLine1")}
-              <br />
+              {/* <br /> */}
               {t("home.hero.titleLine2")}
             </h1>
 
