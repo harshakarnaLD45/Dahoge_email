@@ -6,7 +6,7 @@ import {
   updateProfile,
   sendPasswordResetEmail
 } from 'firebase/auth';
-import { auth } from './firebase';
+import { auth, currentUser } from './firebase';
 
 // Register a new user with email and password
 export const registerUser = async (email, password, displayName) => {
@@ -59,5 +59,5 @@ export const resetPassword = async (email) => {
 
 // Get current user
 export const getCurrentUser = () => {
-  return auth.currentUser;
+  return currentUser();
 };

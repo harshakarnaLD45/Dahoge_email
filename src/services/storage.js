@@ -37,7 +37,7 @@ import {
   getDownloadURL,
   deleteObject,
 } from "firebase/storage";
-import { db, auth, storage } from "./firebase";
+import { db, auth, storage, currentUser } from "./firebase";
 import { EMAIL_TEMPLATE_SEEDS } from "./emailTemplates";
 
 const LOCAL_PREFIX = "mischtisch:";
@@ -142,7 +142,7 @@ export async function setSetting(key, value) {
   }
 
   if (key.startsWith("tischform-new:")) {
-    const user = auth.currentUser;
+    const user = currentUser();
     if (!user) throw new Error("auth/no-current-user");
     await setDoc(doc(db, "tableShapeSubmissions", key), {
       value: clean(value),
@@ -214,8 +214,8 @@ export async function upsertVenue(loc) {
       : loc.createdAt || nowIso(),
   };
 
-  if (!payload.hostUid && auth.currentUser) {
-    payload.hostUid = auth.currentUser.uid;
+  if (!payload.hostUid && currentUser()) {
+    payload.hostUid = currentUser()?.uid;
   }
 
   await setDoc(ref, payload, { merge: true });
@@ -230,7 +230,7 @@ export async function deleteVenue(id) {
 // ---------------------------------------------------------------------- Konto
 
 export async function getAccount() {
-  const user = auth.currentUser;
+  const user = currentUser();
   if (!user) return null;
 
   const profileSnap = await getDoc(doc(db, "guests", user.uid));
@@ -254,7 +254,7 @@ export async function getAccount() {
 }
 
 export async function setAccount(account) {
-  const user = auth.currentUser;
+  const user = currentUser();
 
   if (!user) return;
 
@@ -285,7 +285,7 @@ export async function listReservations(venueId) {
 }
 
 export async function addReservation(res) {
-  let user = auth.currentUser;
+  let user = currentUser();
 
 
 
@@ -383,7 +383,7 @@ export async function listNotifications(venueId) {
 }
 
 export async function addNotification(item) {
-  const user = auth.currentUser;
+  const user = currentUser();
   if (!user) throw new Error("auth/no-current-user");
   await setDoc(doc(db, "notifications", item.id), {
     venueId: item.venue_id || item.venueId,
@@ -426,7 +426,7 @@ export async function getPhotos(venueId) {
 }
 
 export async function setPhotos(venueId, photos) {
-  if (!auth.currentUser)
+  if (!currentUser())
     throw new Error(
       "Für Foto-Uploads ist eine Gastgeber-Anmeldung erforderlich.",
     );
@@ -520,7 +520,7 @@ export async function createHostAccount(email, password) {
 // The password is intentionally never written to Firestore; Firebase Auth
 // securely owns host credentials.
 export async function saveHostRegistration({ venue, registration, profile }) {
-  const user = auth.currentUser;
+  const user = currentUser();
   if (!user) throw new Error("auth/no-current-user");
   if (!venue?.id) throw new Error("Betrieb-ID fehlt.");
 
@@ -594,7 +594,7 @@ export async function saveHostRegistration({ venue, registration, profile }) {
 }
 
 export async function deleteCurrentHostAccount() {
-  const user = auth.currentUser;
+  const user = currentUser();
   if (!user) return;
   try {
     await deleteDoc(doc(db, "hostProfiles", user.uid));
@@ -603,7 +603,7 @@ export async function deleteCurrentHostAccount() {
 }
 
 export async function reauthenticateHost(currentPassword) {
-  const user = auth.currentUser;
+  const user = currentUser();
   if (!user || !user.email) throw new Error("auth/no-current-user");
   const credential = EmailAuthProvider.credential(user.email, currentPassword);
   await reauthenticateWithCredential(user, credential);
@@ -611,8 +611,8 @@ export async function reauthenticateHost(currentPassword) {
 }
 
 export async function updateHostPassword(newPassword) {
-  if (!auth.currentUser) throw new Error("auth/no-current-user");
-  await updatePassword(auth.currentUser, newPassword);
+  if (!currentUser()) throw new Error("auth/no-current-user");
+  await updatePassword(currentUser(), newPassword);
 }
 
 export async function changeHostPassword(currentPassword, newPassword) {
@@ -621,7 +621,7 @@ export async function changeHostPassword(currentPassword, newPassword) {
 }
 
 export async function getHosts() {
-  const user = auth.currentUser;
+  const user = currentUser();
   if (!user) return {};
   const hosts = {};
   try {
@@ -632,7 +632,7 @@ export async function getHosts() {
     });
     return hosts;
   } catch {
-    const own = await getDoc(doc(db, "hostProfiles", auth.currentUser.uid));
+    const own = await getDoc(doc(db, "hostProfiles", currentUser()?.uid));
     if (own.exists()) {
       const data = own.data();
       hosts[normalizeEmail(data.email)] = { ...data, uid: own.id };
@@ -642,12 +642,12 @@ export async function getHosts() {
 }
 
 export async function upsertHost(host) {
-  if (!auth.currentUser) throw new Error("auth/no-current-user");
+  if (!currentUser()) throw new Error("auth/no-current-user");
   await setDoc(
-    doc(db, "hostProfiles", auth.currentUser.uid),
+    doc(db, "hostProfiles", currentUser()?.uid),
     {
-      uid: auth.currentUser.uid,
-      email: auth.currentUser.email,
+      uid: currentUser()?.uid,
+      email: currentUser().email,
       betriebId: host.betriebId,
       inhaber: host.inhaber || "",
       updatedAt: nowIso(),
@@ -657,7 +657,7 @@ export async function upsertHost(host) {
 }
 
 export async function getSession() {
-  const user = auth.currentUser;
+  const user = currentUser();
   if (!user || user.isAnonymous) return null;
   const snap = await getDoc(doc(db, "hostProfiles", user.uid));
   if (!snap.exists()) return null;
@@ -670,7 +670,7 @@ export async function getSession() {
 }
 
 export async function setSession(session) {
-  if (!session) await signOut(auth);
+  if (!session && auth) await signOut(auth);
 }
 
 // --------------------------------------------------------------- Registrierungen
@@ -685,11 +685,11 @@ export async function listRegistrations() {
 }
 
 export async function addRegistration(reg) {
-  if (!auth.currentUser) throw new Error("auth/no-current-user");
+  if (!currentUser()) throw new Error("auth/no-current-user");
   await setDoc(doc(db, "registrations", reg.id), {
     ...clean(reg),
     id: reg.id,
-    createdByUid: auth.currentUser.uid,
+    createdByUid: currentUser()?.uid,
     createdAt: reg.createdAt || nowIso(),
   });
 }
@@ -757,7 +757,7 @@ export async function setEmailTemplate(key, lang, subject, lines) {
 // ---------------------------------------------------------- Wartung & Backup
 
 export async function resetAll() {
-  const user = auth.currentUser;
+  const user = currentUser();
   if (!user) return;
   const batch = writeBatch(db);
   batch.delete(doc(db, "guests", user.uid));

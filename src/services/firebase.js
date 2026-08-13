@@ -40,4 +40,11 @@ export const db = app ? getFirestore(app) : null;
 export const storage = app ? getStorage(app) : null;
 export { app };
 
+// True when the build shipped with Firebase environment variables.
+export const firebaseReady = hasConfig;
+
+// Null-safe current user: returns null when Firebase is not configured
+// or no user is signed in, so callers can degrade gracefully.
+export const currentUser = () => (auth ? auth.currentUser : null);
+
 export default app;
