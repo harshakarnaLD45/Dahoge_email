@@ -30,14 +30,12 @@ import {
   reauthenticateWithCredential,
   onAuthStateChanged,
 } from "firebase/auth";
-import {
-  getStorage,
-  ref as storageRef,
-  uploadString,
-  getDownloadURL,
-  deleteObject,
-} from "firebase/storage";
-import { db, auth, storage, currentUser } from "./firebase";
+// ponytail: photos are stored as base64 data URLs directly in Firestore
+// (venuePhotos collection). Cloud Storage was removed — the 1 MB doc limit
+// is respected by compressing images in PhotoUploader before upload.
+// Upgrade path: if images outgrow the doc limit, re-introduce Cloud Storage
+// for the binary and keep only the download URL in Firestore.
+import { db, auth, currentUser } from "./firebase";
 import { EMAIL_TEMPLATE_SEEDS } from "./emailTemplates";
 
 const LOCAL_PREFIX = "mischtisch:";
@@ -407,17 +405,6 @@ export async function removeNotification(venueId, id) {
 
 // ---------------------------------------------------------------------- Fotos
 
-function isDataUrl(value) {
-  return typeof value === "string" && value.startsWith("data:");
-}
-
-async function uploadPhotoData(path, value) {
-  if (!isDataUrl(value)) return { url: value || "", path: null };
-  const sRef = storageRef(storage, path);
-  await uploadString(sRef, value, "data_url");
-  return { url: await getDownloadURL(sRef), path };
-}
-
 export async function getPhotos(venueId) {
   const snap = await getDoc(doc(db, "venuePhotos", venueId));
   return snap.exists() && Array.isArray(snap.data().items)
@@ -432,45 +419,17 @@ export async function setPhotos(venueId, photos) {
     );
 
   const ref = doc(db, "venuePhotos", venueId);
-  const oldSnap = await getDoc(ref);
-  const oldItems =
-    oldSnap.exists() && Array.isArray(oldSnap.data().items)
-      ? oldSnap.data().items
-      : [];
-  const saved = [];
 
-  for (const photo of photos || []) {
-    const id =
-      photo.id || `f-${Date.now()}-${Math.floor(Math.random() * 100000)}`;
-    const base = `venues/${venueId}/${id}`;
-    const small = await uploadPhotoData(`${base}-small.jpg`, photo.klein);
-    const large = await uploadPhotoData(`${base}-large.jpg`, photo.gross);
-    saved.push({
-      id,
-      titel: photo.titel || "",
-      klein: small.url,
-      gross: large.url,
-      smallPath: small.path || photo.smallPath || null,
-      largePath: large.path || photo.largePath || null,
-    });
-  }
+  const items = (photos || []).map((photo) => ({
+    id:
+      photo.id || `f-${Date.now()}-${Math.floor(Math.random() * 100000)}`,
+    titel: photo.titel || "",
+    klein: photo.klein || "",
+    gross: photo.gross || "",
+  }));
 
-  const keepIds = new Set(saved.map((photo) => photo.id));
-  for (const old of oldItems) {
-    if (keepIds.has(old.id)) continue;
-    for (const path of [old.smallPath, old.largePath]) {
-      if (!path) continue;
-      try {
-        await deleteObject(storageRef(storage, path));
-      } catch (error) {
-        if (error?.code !== "storage/object-not-found")
-          console.warn("Altes Foto konnte nicht gelöscht werden", error);
-      }
-    }
-  }
-
-  await setDoc(ref, { venueId, items: saved, updatedAt: nowIso() });
-  return saved;
+  await setDoc(ref, { venueId, items, updatedAt: nowIso() });
+  return items;
 }
 
 // --------------------------------------------------------------------- Zugänge

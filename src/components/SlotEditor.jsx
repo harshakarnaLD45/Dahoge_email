@@ -159,8 +159,8 @@ export function SlotEditor({ slots = [], onChange }) {
                   onClick={selectAll}
                   style={{
                   color: "#1f1f1f",
-                  width: "80px",
-                  height: "40px",
+                  width: "100px",
+                  height: "auto",
                   borderRadius: "12px",
                   fontSize: "14px",
                   border: "1px solid #1f1f1f",
